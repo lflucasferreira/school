@@ -1,0 +1,499 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description"
+    content="Курс разработан специально для тех, кто хочет освоить профессию QA инженера. Курс является сбалансированным, уделяет внимание как детальному изучению теории, так и практическим навыкам" />
+  <meta name="keywords"
+    content="курсы тестеров, Львов, курсы тестировщиков, курсы QA, QA инженер, цена, лучшие, IT курсы, QA School" />
+  <title>Курсы по тестированию программного обеспечения во Львове / QA School</title>
+  <link rel="stylesheet" href="../assets/css/animate.min.css">
+  <link rel="stylesheet" href="../assets/css/app.min-v=0.2.css">
+  <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-80678923-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '370162520543067');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=370162520543067&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
+</head>
+
+<body>
+
+  <div id="register_popup" data-reveal class="register-box reveal" data-animation-in="slide-in-down"
+    data-animation-out="slide-out-up">
+    <span class="close hide-for-small-only" data-close></span>
+    <span class="close close-sm show-for-small-only" data-close>x</span>
+    <div class="divider"></div>
+    <div class="title">Регистрация</div>
+    <form action="#" id="register_form_popup">
+      <div class="row">
+        <div class="columns medium-6">
+          <select id="curse_select_popup" name="course" class="form-control">
+            <option selected value="Основи Тестування ПЗ">Основы Тестирование ПО</option>
+            <option value="Поглиблена Практика">Углубленная Практика</option>
+            <option value="Автоматизоване Тестування">Автоматизированное Тестирование</option>
+            <option value="Безкоштовна презентація курсу">Бесплатная презентация курса</option>
+          </select>
+        </div>
+        <div class="columns medium-6">
+          <input type="text" name="firstlastname" class="form-control" placeholder="Фамилия и имя">
+        </div>
+      </div>
+      <div class="row">
+        <div class="columns medium-6">
+          <input type="text" name="phonenumber" class="form-control" placeholder="Моб. телефон">
+        </div>
+        <div class="columns medium-6">
+          <input type="text" name="email" class="form-control" placeholder="Электронная почта">
+        </div>
+      </div>
+      <div class="row">
+        <div class="columns medium-12">
+          <input type="text" name="comment" class="form-control" placeholder="Комментарии">
+          <button type="submit" class="button button_icon">Отправить заявку <span class="icon"></span></button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div id="register_success" data-reveal class="register-box reveal" data-animation-in="slide-in-down"
+    data-animation-out="slide-out-up">
+    <span class="close hide-for-small-only" data-close></span>
+    <span class="close close-sm show-for-small-only" data-close>x</span>
+    <div class="divider"></div>
+    <div class="title">Регистрация</div>
+    <div class="common-title">Заявка отправлена</div>
+    <div class="text">Поздравляем, Вы успешно зарегистрировались на курс "Основы тестирования программного обеспечения".
+      наш
+           менеджер свяжется с Вами в течение 24 часов.
+    </div>
+    <button type="button" data-close class="button button_icon"><i class="icon-check"></i> Ok</button>
+  </div>
+
+  <div class="wrapper">
+    <section class="container container_banner__sm">
+      <header class="container_header clearfix">
+        <span class="header_logo header_logo__dark">
+          <a href="../index.html">QAschool</a>
+        </span>
+        <a href="javascript:void(0)" class="link-register" onclick="ga('send', 'pageview', '/click-reg-plus');"> <span
+            class="secondary">+</span> Регистрация</a>
+      </header>
+      <h1 class="curse_head"><span>КУРС</span> <br>Основы тестирования программного обеспечения</h1>
+    </section>
+    <section class="clearfix container_content_curse">
+      <div class="curse-section curse-section__left">
+        <span id="ankor_top"></span>
+        <div class="content_curse content_curse__left">
+          <div class="title-curse-common">
+            Курс разработан специально для тех, кто хочет освоить профессию QA-инженера. Программа является
+            сбалансированной, уделяет внимание как детальному изучению теории, так и практическим навыкам. Поэтому после
+            прохождения курса по подготовке тестеров вы будете иметь теоретическую базу знаний и достаточный уровень
+            практических навыков для начала работы тест-инженером.
+          </div>
+          <div class="divider"></div>
+
+          <div class="course-program-box">
+            <div class="title-c">УЧЕБНЫЙ ПЛАН:</div>
+            <ul class="list list_program">
+              <li class="active">
+                <span class="round">01</span>
+                <div class="head">Основы тестирования</div>
+                <div class="head-en">(Fundamentals of testing)</div>
+                <div class="description">
+                  На первых занятиях курсов тестеров во Львове вы узнаете, что являет собой тестирование и каковы его
+                  основные цели. А также, почему работа QA-инженера является неотъемлемой частью разработки программного
+                  обеспечения. Вы поймете разницу между такими стандартами, как Validation и Verification. Мы будем
+                  говорить о рисках и определять, когда и по какой причине возникает ошибка. Также в процессе обучения
+                  вы
+                  ознакомитесь с принципами тестирования и закрепите этот теоретический блок на практике.
+                </div>
+              </li>
+              <li>
+                <span class="round">02</span>
+                <div class="head">ЖИЗНЕННЫЙ ЦИКЛ РАЗРАБОТКИ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ</div>
+                <div class="head-en">Software Development Life Cycle</div>
+                <div class="description">
+                  SDLC – это непрерывный процесс, который начинается с момента принятия решения о необходимости создания
+                  ПО и заканчивается, когда продукт окончательно выводят из эксплуатации. В зависимости от проекта
+                  используются и различные методы (или так называемые модели) разработки ПО. На наших курсах тестеров мы
+                  ознакомим вас с жизненным циклом разработки ПО и остановимся на каждом из его этапов, рассмотрим
+                  последовательные и гибкие модели (Waterfall, V-model, Scrum, Kanban) и выясним разницу между моделями,
+                  их преимущества и недостатки.
+                </div>
+              </li>
+              <li>
+                <span class="round">03</span>
+                <div class="head">ДЕТАЛЬНОЕ ИЗУЧЕНИЕ SCRUM МЕТОДОЛОГИИ</div>
+                <div class="head-en">Scrum</div>
+                <div class="description">
+                  <p>
+                    Scrum – одна из самых популярных методологий (моделей) разработки программного обеспечения. Она
+                    акцентирует внимание на качественном контроле процесса разработки.
+                  </p>
+                  На этом занятии в рамках курса QA-инженеров мы подробно рассмотрим:
+                  <ul class="indent">
+                    <li>- основные принципы и этапы методологии;</li>
+                    <li>- понятие итерации (Sprint);</li>
+                    <li>- роли (Product Owner, Scrum Master, Scrum Dev
+                      Team);
+                    </li>
+                    <li>- артефакты (Project Backlog, Sprint Backlog);</li>
+                    <li>- meetings (Daily, Sprint Planning, Sprint Review, Sprint Retrospective,
+                      Backlog Refinement);
+                    </li>
+                    <li>- типы задач (Epic, Story, Tasks, Subtasks).</li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <span class="round">04</span>
+                <div class="head">ПРОЦЕСС ТЕСТИРОВАНИЯ</div>
+                <div class="head-en">Software testing process</div>
+                <div class="description">
+                  <p>
+                    На занятиях вы узнаете, из каких основных фаз состоит процесс тестирования. Мы поговорим о том,
+                    насколько важен анализ требований, и что нужно делать в случае отсутствия спецификаций. Вы
+                    познакомитесь с различными видами документации: тест-план (Test Plan), матрица отслеживания
+                    (Tracebility Matrix), а также научитесь определять входные и выходные критерии тестирования.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span class="round">05</span>
+                <div class="head">ТРЕБОВАНИЯ</div>
+                <div class="head-en">Reguirements</div>
+                <div class="description">
+                  Анализ требований является главным этапом в разработке программного обеспечения. Именно поэтому так
+                  важно знать правила их определения. На курсах тестировщиков мы познакомим вас с типами требований и
+                  научим различать функциональные и нефункциональные их виды, а также покажем типичные ошибки при
+                  написании требований на примере.
+                </div>
+              </li>
+              <li>
+                <span class="round">06</span>
+                <div class="head">ОШИБКИ</div>
+                <div class="head-en">Software Issue</div>
+                <div class="description">
+                  На этом занятии вы узнаете, что такое ошибка, какие бывают виды ошибок и их компоненты. Мы проследим
+                  весь жизненный цикл продукта и научимся писать отчет об ошибке (Bug reporting).
+                </div>
+              </li>
+              <li>
+                <span class="round">07</span>
+                <div class="head">РАЗРАБОТКА ТЕСТОВ</div>
+                <div class="head-en">Test Design</div>
+                <div class="description">
+                  В соответствии с утвержденными требованиями разрабатываются тестовые случаи (Test Сases). Вы узнаете
+                  правила написания тестовых кейсов и их компоненты, растолкуете для себя понятие отрицательных и
+                  положительных тестов, познакомитесь с Check List и научитесь правильно его использовать.
+                </div>
+              </li>
+              <li>
+                <span class="round">08</span>
+                <div class="head">УРОВНИ И ТИПЫ ТЕСТИРОВАНИЯ</div>
+                <div class="head-en">Test Levels & Types</div>
+                <div class="description">
+                  Во время лекций на курсах тестеров вы узнаете, какие бывают уровни и типы тестирования, их
+                  особенности,
+                  а главное – как их использовать на практике.
+                </div>
+              </li>
+              <li>
+                <span class="round">09</span>
+                <div class="head">ПРАКТИЧЕСКИЕ ЗАНЯТИЯ (ЧАСТЬ #1)</div>
+                <div class="head-en">Practice (Part#1)</div>
+                <div class="description">
+                  Проведение тестирования Desktop-приложения, а именно:
+                  <ul class="indent">
+                    <li> - написание тестовых кейсов (случаев) (Test Cases);</li>
+                    <li> - создание матрицы отслеживания (Treceability Matrix);</li>
+                    <li> - выполнение тестирования (Test Execution);</li>
+                    <li> - обновление тестовых кейсов;</li>
+                    <li> - отчет об ошибке (Bug Reporting);</li>
+                    <li> - работа с баг-трекинговой системой Jira.</li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <span class="round">10</span>
+                <div class="head">ТЕХНИКИ ТЕСТИРОВАНИЯ</div>
+                <div class="head-en">Software Testing Techniguess</div>
+                <div class="description">
+                  На этих занятиях курсов QA-инженеров вы узнаете о статических и динамических техниках тестирования,
+                  техники черного ящика (black box), белого ящика (white box) и определите различия между ними; выявите
+                  особенности техники, базирующейся на опыте инженера (Experience-based). Мы подробно рассмотрим техники
+                  черного ящика: Equivalence Partitioning, Boundary Value Analysis, Decision Table, State Transition,
+                  Use
+                  Case Testing, и испытаем их на практике.
+                </div>
+              </li>
+              <li>
+                <span class="round">11</span>
+                <div class="head">БАЗЫ ДАННЫХ И SQL ЗАПРОСЫ</div>
+                <div class="head-en">Data Base and SQL queries</div>
+                <div class="description">
+                  Чтобы провести качественное и полное тестирование программного продукта, QA-инженер должен не только
+                  владеть различными видами и техниками тестирования, но и уметь работать с базой данных. Мы
+                  познакомимся
+                  с моделями баз данных и подробно рассмотрим особенности именно реляционной базы данных. Проходя курс
+                  тестировщиков, вы научитесь создавать SQL запросы и работать с СУБД, такой как MS SQL Server, и,
+                  конечно, использовать эти навыки в ходе тестирования реального WEB-проекта.
+                </div>
+              </li>
+              <li>
+                <span class="round">12</span>
+                <div class="head">ПРАКТИЧЕСКИЕ ЗАНЯТИЯ (ЧАСТЬ #2)</div>
+                <div class="head-en">Practice (Part#2)</div>
+                <div class="description">
+                  Проведение тестирования реального WEB проекта по методологии Scrum:
+                  <ul class="indent">
+                    <li> - анализ требований и работа со спецификацией;</li>
+                    <li> - общение и сотрудничество с заказчиком, уточнение требований;</li>
+                    <li> - написание тестовых случаев (Test cases) согласно спецификации;</li>
+                    <li> - выполнение тестирования (Test execution);</li>
+                    <li> - изменение требований и обновление тестовых кейсов;</li>
+                    <li> - отслеживание процесса тестирования (Tracebility Matrix);</li>
+                    <li> - отчет об ошибке;</li>
+                    <li> - работа с баг-трекинговой системой Jira;</li>
+                    <li> - тестирование и работа с базой данных;</li>
+                    <li> - сотрудничество с программистом: отслеживание ошибки от ее создания до ликвидации;</li>
+                    <li> - создание отчета о проведенном тестирования (Test Summary Report).</li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <span class="round">13</span>
+                <div class="head">Тестирования REST API</div>
+                <div class="head-en">RESTful APIs</div>
+                <div class="description">
+                  Основы тестирования APIs используя инструмент Postman
+                </div>
+              </li>
+              <li>
+                <span class="round">14</span>
+                <div class="head">Tестирования Производительности</div>
+                <div class="head-en">Performance testing</div>
+                <div class="description">
+                  Основы тестирования производительности используя инструмент Jmeter
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <span id="ankor_bottom"></span>
+      </div>
+      <div class="curse-section curse-section__right" data-sticky-container>
+        <div class="content_curse content_curse__right" data-sticky data-top-anchor="ankor_top:top"
+          data-btm-anchor="ankor_bottom:bottom">
+          <div class="detail-curse-box">
+            <div class="title-c">ДЕТАЛИ КУРСА</div>
+            <div class="list-detail-curse">
+              <div class="row collapse">
+                <div class="columns small-8"><span class="title">Hачало курса</span></div>
+                <div class="columns small-4"><span class="val">18 декабря</span></div>
+              </div>
+              <div class="row collapse">
+                <div class="columns small-8"><span class="title duration-curse">Продолжительность курса</span></div>
+                <div class="columns small-4"><span class="val">24 занятий</span></div>
+              </div>
+              <div class="row collapse">
+                <div class="columns small-8"><span class="title duration-lecture">Продолжительность лекции</span></div>
+                <div class="columns small-4"><span class="val">19:00—21:00</span></div>
+              </div>
+              <div class="row collapse">
+                <div class="columns small-8"><span class="title intensity">Интенсивность</span></div>
+                <div class="columns small-4"><span class="val">Два раза в неделю</span></div>
+              </div>
+              <div class="row collapse">
+                <div class="columns small-8"><span class="title group">Група</span></div>
+                <div class="columns small-4"><span class="val">до 16 человек</span></div>
+              </div>
+              <div class="row collapse">
+                <div class="columns small-8"><span class="title price">Стоимость</span></div>
+                <div class="columns small-4"><span class="val">9900 грн</span></div>
+              </div>
+            </div>
+            <div class="button-box">
+              <a id="register-for-course" class="button button_icon"
+                onclick="ga('send', 'pageview', '/click-reg-basic-curse');">записаться на курс<span
+                  class="icon"></span></a>
+              <a href="presentation.html" class="button button_icon button__gold">Бесплатная презентация<span
+                  class="icon"></span></a>
+            </div>
+            <div class="info">Презентация курса состоится 29 ноября</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container container_additional clearfix">
+      <div class="additional-title contrast">Дополнительные курсы</div>
+      <a href="practice.html">
+        <div class="additional additional_left">
+          <div class="additional-item">
+            <div class="divider"></div>
+            <div class="head">Углубленная <br> практика</div>
+            <div class="date">Начало 25 апреля</div>
+          </div>
+        </div>
+      </a>
+      <a href="automation.html">
+        <div class="additional additional_right">
+          <div class="additional-item">
+            <div class="divider"></div>
+            <div class="head">Автоматизированное <br> Тестирование</div>
+            <div class="date">ОНЛАЙН-ВИДЕО КУРС</div>
+          </div>
+        </div>
+      </a>
+    </section>
+    <section id="contacts" class="container container_screen container_footer">
+      <header class="container_header container_header__absolute clearfix">
+        <span class="header_logo header_logo__white">
+          <a href="../index.html">QAschool</a>
+        </span>
+        <a href="javascript:void(0)" class="link-register link-register__dark"
+          onclick="ga('send', 'pageview', '/click-reg-plus');"> <span class="secondary">+</span> Регистрация</a>
+      </header>
+      <div class="left-pagination">
+        <div class="left-pagination_center">
+          <a href="basic.html#" class="current-page current-page__round dark-gray">
+            07
+            <div class="circle-svg">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="60px" height="60px" viewBox="0 0 16 16"
+                preserveAspectRatio="none">
+                <circle cx="8" cy="8" r="6.215" transform="rotate(90 8 8)"></circle>
+              </svg>
+            </div>
+          </a>
+          <div class="page-name dark-gray">Контакты</div>
+        </div>
+      </div>
+      <div class="vertical-center-top contacts-box">
+        <div class="contact-box">
+          <div class="brand animated">
+            <span class="after animated"></span>
+          </div>
+          <div class="info animated">
+            <p class="string">г. Львов, <br> ул. Лемковская 9A</p>
+            <p class="string">+38(067)937-55-23</p>
+            <p class="string lowercase">info@qaschool.com.ua</p>
+          </div>
+        </div>
+        <div class="register-box">
+          <div class="divider"></div>
+          <div class="title">Регистрация</div>
+          <form action="#" id="register_form">
+            <div class="row">
+              <div class="columns medium-6">
+                <select id="curse_select" name="course" class="form-control">
+                  <option selected value="Основи Тестування ПЗ">Основы Тестирование ПО</option>
+                  <option value="Поглиблена Практика">Углубленная Практика</option>
+                  <option value="Автоматизоване Тестування">Автоматизированное Тестирование</option>
+                  <option value="Безкоштовна презентація курсу">Бесплатная презентация курса</option>
+                </select>
+              </div>
+              <div class="columns medium-6">
+                <input type="text" name="firstlastname" class="form-control" placeholder="Фамилия и имя">
+              </div>
+            </div>
+            <div class="row">
+              <div class="columns medium-6">
+                <input type="text" name="phonenumber" class="form-control" placeholder="Моб. телефон">
+              </div>
+              <div class="columns medium-6">
+                <input type="text" name="email" class="form-control" placeholder="Электронная почта">
+              </div>
+            </div>
+            <div class="row">
+              <div class="columns medium-12">
+                <input type="text" name="comment" class="form-control" placeholder="Комментарии">
+                <button type="submit" class="button button_icon">Отправить заявку <span class="icon"></span></button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!--<ul class="navigation navigation__dark list-inline">-->
+      <!--<li><a data-menuanchor="firstPage" class="about_us" href="basic.html#firstPage">Про нас</a></li>
+<li><a data-menuanchor="secondPage" class="goal" href="basic.html#secondPage">мета</a></li>
+<li><a data-menuanchor="thirdPage" class="engineer" href="basic.html#">QA Engineer</a></li>
+<li><a data-menuanchor="fourthPage" class="advantages" href="basic.html#fourthPage">Переваги</a></li>
+<li><a data-menuanchor="fifthPage" class="curse" href="basic.html#fifthPage">курси</a></li>
+<li><a data-menuanchor="sixPage" class="teacher" href="basic.html#sixPage">Викладачі</a></li>
+<li><a data-menuanchor="lastPage" class="contacts" href="basic.html#lastPage">Контакти</a></li>
+-->
+      <!--</ul>-->
+      <div class="copyright">© QASCHOOL, 2015 - 2019 ЭТА СТРАНИЦА НА <a href="../basic.html">украинском языке</a></div>
+    </section>
+  </div>
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="http://cdn.jsdelivr.net/vivus/latest/vivus.min.js"></script>
+
+  <script src="../assets/js/fetch.js"></script>
+  <!--<script src="../assets/js/snap.svg.js"></script>-->
+  <!--google maps-->
+  <!--<script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=true"></script>-->
+  <!--<script type="text/javascript" src="../assets/js/gmaps.js"></script>-->
+  <script type="text/javascript" src="../assets/js/jquery.validate.min.js"></script>
+  <!--<script type="text/javascript" src="../assets/js/additional-methods.min.js"></script>-->
+
+  <script src="../assets/js/jquery.matchHeight-min.js"></script>
+  <script src="../assets/js/jquery.fullpage.min.js"></script>
+  <script src="../assets/js/jquery.ikSelect.min.js"></script>
+  <script src="../assets/js/typed.min.js"></script>
+  <script src="../assets/js/app-v=0.2.js"></script>
+
+  <!-- Код тега ремаркетинга Google -->
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 877812832;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+  /* ]]> */
+  </script>
+  <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+  </script>
+  <noscript>
+    <div style="display:inline;">
+      <img height="1" width="1" style="border-style:none;" alt=""
+        src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/877812832/?value=0&guid=ON&script=0" />
+    </div>
+  </noscript>
+</body>
+
+</html>

@@ -1,0 +1,586 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description"
+    content="На заняттях курсу «Автоматизоване тестування» ми освоїмо усі підходи автоматизації веб-додатків за допомогою популярних інструментів Selenium IDE та Selenium WebDriver." />
+  <meta name="keywords"
+    content="курси автоматизованого тестування, Львів, курси автоматизації тестування, курси QA automation, навчання, QA інженер, ціна, кращі, IT курси, QA School" />
+  <title>Курси автоматизованного тестування ПЗ та додатків — навчання автоматизації (QA automation) у Львові / QA
+    School</title>
+  <link rel="stylesheet" href="assets/css/animate.min.css">
+  <link rel="stylesheet" href="assets/css/app.min-v=0.2.css">
+  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-80678923-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '370162520543067');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=370162520543067&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
+</head>
+
+<body>
+
+  <div id="register_popup" data-reveal class="register-box reveal" data-animation-in="slide-in-down"
+    data-animation-out="slide-out-up">
+    <span class="close hide-for-small-only" data-close></span>
+    <span class="close close-sm show-for-small-only" data-close>x</span>
+    <div class="divider"></div>
+    <div class="title">РЕєстрація</div>
+    <form action="#" id="register_form_popup">
+      <div class="row">
+        <div class="columns medium-6">
+          <select id="curse_select_popup" name="course" class="form-control">
+            <option value="Основи Тестування ПЗ">Основи Тестування ПЗ</option>
+            <option value="Поглиблена Практика">Поглиблена Практика</option>
+            <option selected value="Автоматизоване Тестування">Автоматизоване Тестування</option>
+            <option value="Безкоштовна презентація курсу">Безкоштовна презентація курсу</option>
+          </select>
+        </div>
+        <div class="columns medium-6">
+          <input type="text" name="firstlastname" class="form-control" placeholder="Прізвище та імя">
+        </div>
+      </div>
+      <div class="row">
+        <div class="columns medium-6">
+          <input type="text" name="phonenumber" class="form-control" placeholder="Моб. телефон">
+        </div>
+        <div class="columns medium-6">
+          <input type="text" name="email" class="form-control" placeholder="Електронна пошта">
+        </div>
+      </div>
+      <div class="row">
+        <div class="columns medium-12">
+          <input type="text" name="comment" class="form-control" placeholder="Коментарі">
+          <button type="submit" class="button button_icon">Відправити заявку <span class="icon"></span></button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div id="register_success" data-reveal class="register-box reveal" data-animation-in="slide-in-down"
+    data-animation-out="slide-out-up">
+    <span class="close hide-for-small-only" data-close></span>
+    <span class="close close-sm show-for-small-only" data-close>x</span>
+    <div class="divider"></div>
+    <div class="title">РЕєстрація</div>
+    <div class="common-title">Заявку відправлено</div>
+    <div class="text">Вітаємо, Ви успішно зареєструвались на курс "Автоматизоване Тестування". Наш менеджер зв'яжеться з
+      Вами
+      протягом 24 годин.
+    </div>
+    <button type="button" data-close class="button button_icon"><i class="icon-check"></i> Гаразд</button>
+  </div>
+
+  <div class="wrapper">
+    <section class="container container_banner__sm">
+      <header class="container_header clearfix">
+        <span class="header_logo header_logo__dark">
+          <a href="index.html">QAschool</a>
+        </span>
+        <a href="javascript:void(0)" class="link-register" onclick="ga('send', 'pageview', '/click-reg-plus');"> <span
+            class="secondary">+</span> Реєстрація</a>
+      </header>
+      <h1 class="curse_head"><span>КУРС</span> <br>Автоматизоване Тестування</h1>
+    </section>
+    <section class="clearfix container_content_curse">
+      <div class="curse-section curse-section__left">
+        <span id="ankor_top"></span>
+        <div class="content_curse content_curse__left">
+          <div class="title-curse-common">
+            <p>
+              Курс автоматизованого тестування(qa automation) розроблений спеціально для людей і без особливої
+              попередньої
+              підготовки, і для тестувальників ПЗ, які бажають кар’єрного росту. На заняттях ми освоїмо усі підходи
+              автоматизації веб-додатків за допомогою популярного інструменту Selenium WebDriver.
+            </p>
+            <p>
+              Тестові сценарії будемо автоматизовувати на С# - одній з найпопулярніших мов програмування в світі. Якщо
+              ви не знаєте С# - не проблема! Ми почнемо з вивчення основ цієї мови і досягнемо рівня, необхідного для
+              написання авто-тестів.
+            </p>
+            <p>
+              Навчання буде проходити у форматі ОНЛАЙН-ВІДЕО уроків. Це означає що вам не доведеться чекати поки
+              сформується
+              нова група, розпочніть своє навчання прямо зараз. Ви отримаєте
+              <span style="background: #DBB027">доступ до всіх відео-уроків</span> на постійній основі,
+              відповідно ви зможете переглядати їх знову і знову будь де, в будь який час.
+              А також ми надаємо вам <span style="background: #DBB027">веб-сайт з базою даних</span> де ви зможете
+              виконувати усі завдання, в тому числі пов`язані
+              <span style="background: #DBB027">з SQL запитами</span>. Під час навчання буде
+              <span style="background: #DBB027">супровід
+                нашого викладача</span>, який відповість на всі ваші питання та допоможе вирішити будь які труднощі.
+              Навчання
+              автоматизації тестування орієнтоване в першу чергу на набуття практичних навичок, а також розуміння
+              основних
+              теоретичних понять. Наприкінці курсу ми підготували для вас список можливих питань для проходження
+              співбесіди
+              на позицію Automation QA
+            </p>
+          </div>
+          <div class="divider"></div>
+
+          <div class="course-program-box">
+            <div class="title-c">Навчальний план:</div>
+            <ul class="list list_program">
+              <li class="active">
+                <span class="round">01</span>
+                <div class="head">Відео#1 (Завантаження та встановлення IDE 'Visual Studio')</div>
+                <div class="round-separator"></div>
+                <div class="description">
+                  Завантаження та встановлення IDE 'Visual Studio'
+                  <br>
+                  Створення нового проекту
+                </div>
+              </li>
+              <li>
+                <span class="round">02</span>
+                <div class="head">Відео#2 (Написання першого тесту)</div>
+                <div class="round-separator"></div>
+                <div class="description">
+                  Створення нового класу
+                  <br>
+                  Встановлення необхідних пакетів
+                  <br>
+                  Написання першого тесту
+                  <br>
+                  Анотація [Test]
+                  <br>
+                  Запуск тесту
+                  <br>
+                  Ознайомлення з Debbug
+                  <br>
+                  Деякі команди браузера(Url, Title, Close, Quit)
+                </div>
+              </li>
+              <li>
+                <span class="round">03</span>
+                <div class="head">Відео#3 (Команди навігації та рекомендації щодо написання тестів)</div>
+                <div class="round-separator"></div>
+                <div class="description">
+                  Команди навігації в межах браузера(GoToUrl, Back, Forward, Refresh)
+                  <br>
+                  Покращення вже існуючого коду(Уникнення дублюючого коду)
+                  <br>
+                  АнотаціЇ [SetUp], [TearDown], [Order]
+                  <br>
+                  Модифікатор доступу 'Private'
+                  <br>
+                  Створення допоміжних методів
+                  <br>
+                  Debbuging
+                  <br>
+                  Створення опису до кожного тесту 'Summary'
+                </div>
+              </li>
+              <li>
+                <span class="round">04</span>
+                <div class="head">Відео#4 (Робота з веб елементами, типи локаторів та CssSelector)</div>
+                <div class="round-separator"></div>
+                <div class="description">
+                  Веб елементи(теги, атрібути, значенння)
+                  <br>
+                  Пошук елементів за допомогою Developer tools
+                  <br>
+                  Команда FindElement
+                  <br>
+                  Типи локатори(Id, Name, TagName, LinkText, PartialLinkText, ClassName)
+                  <br>
+                  Перша зустріч з помилками типу: StaleElementReferenceException, NoSuchElementException
+                  <br>
+                  Пошук елементів використовуючи CssSelector
+                </div>
+              </li>
+              <li>
+                <span class="round">05</span>
+                <div class="head">Відео#5 (Різниця між FindElement та FindElements)</div>
+                <div class="round-separator"></div>
+                <div class="description">
+                  Різниця між FindElement та FindElements
+                </div>
+              </li>
+              <li>
+                <span class="round">06</span>
+                <div class="head">Відео#6 (Пошук веб елементів використовуючи Xpath)</div>
+                <div class="round-separator"></div>
+                <div class="description">
+                  Пошук веб елементів використовуючи Xpath
+                  <br>
+                  Різниця між CssSelector та Xpath
+                </div>
+              </li>
+              <li>
+                <span class="round">07</span>
+                <div class="head">Відео#7 (Основи Програмування Частина1: Типи даних, Умовні конструкції)</div>
+                <div class="round-separator"></div>
+                <div class="description">
+                  Типи Даних
+                  <br>
+                  Умовні конструкції If, else
+                  <br>
+                  Опрацювання Checkbox
+                  <br>
+                  Метод isSelected() та де його застосовувати
+                </div>
+              </li>
+              <li>
+                <span class="round">08</span>
+                <div class="head">Відео#8 (Основи Програмування Частина2: Цикли, Колекції)</div>
+                <div class="round-separator"></div>
+                <div class="description">
+                  Конструкція Switch/Case
+                  <br>
+                  Цикл For
+                  <br>
+                  Колекції: List, ArrayList, Dictionary
+                </div>
+              </li>
+              <li>
+                <span class="round">09</span>
+                <div class="head">Відео#9 (Створення тестового Фреймворку з нуля)</div>
+                <div class="round-separator"></div>
+                <div class="description">
+                  Правильне написання тестів
+                  <br>
+                  Метод Assert.IsTrue()
+                  <br>
+                  Multiple Assert або Soft Assert
+                  <br>
+                  Метод Thread.Sleep() і чому його не бажано використовувати
+                  <br>
+                  Конструкція Try-Catch та як опрацьовувати вийнятки(Exceptions)
+                  <br>
+                  Використання метода IsElementPresent
+                  <br>
+                  Explicit wait
+                </div>
+              </li>
+              <li>
+                <span class="round">10</span>
+                <div class="head">Відео#10 (Структура Фреймворку)</div>
+                <div class="round-separator"></div>
+                <div class="description">
+                  Page Object
+                  <br>
+                  Page Factory та ініціалізація обієктів
+                  <br>
+                  Конструктор(Constructor). Як і де його використовувати
+                  <br>
+                  Принцип ООП 'Інкапсуляція' та використання його на практиці
+                  <br>
+                  Винесення допоміжних методів в окремий клас
+                  <br>
+                  Створення базового класу
+                  <br>
+                  Принцип ООП 'Наслідування'
+                  <br>
+                  Модифікатор доступу 'protected'
+                  <br>
+                  Метод GetAttribute("innerText") та коли він буває корисним
+                </div>
+              </li>
+              <li>
+                <span class="round">11</span>
+                <div class="head">Відео#11 (Зберігання тестових даних в форматі Json)</div>
+                <div class="round-separator"></div>
+                <div class="description">
+                  Зберігання тестових даних в форматі Json
+                  <br>
+                  Десеріалізація Json файлів
+                  <br>
+                  Підстановка Json даних в модельки
+                  <br>
+                  Використання даних в тестових методах
+                </div>
+              </li>
+              <li>
+                <span class="round">12</span>
+                <div class="head">Відео#12 (Логер та підключення log4net)</div>
+                <div class="round-separator"></div>
+                <div class="description">
+                  Підключення пакету log4net
+                  <br>
+                  Налаштування лог файлу та його використання
+                  <br>
+                  Вивід логів в консоль та окремий файл
+                </div>
+              </li>
+              <li>
+                <span class="round">13</span>
+                <div class="head">Відео#13 (Альтернатива PageFactory)</div>
+                <div class="round-separator"></div>
+                <div class="description">
+                  PageObject без використання PageFactory
+                  <br>
+                  Explicit wait та ExpectedConditions class
+                  <br>
+                  Конструкція Switch/Case на практиці
+                  <br>
+                  #region та #endregion
+                </div>
+              </li>
+              <li>
+                <span class="round">14</span>
+                <div class="head">Відео#14 (Корисні методи)</div>
+                <div class="round-separator"></div>
+                <div class="description">
+                  Знайомство з IJavaScriptExecutor
+                  <br>
+                  Вертикальний/Горизонтальний скрол
+                  <br>
+                  Метод який скролить до вказаного обєкта
+                  <br>
+                  Робота з DropDown. Методи SelectByValue та SelectByText
+                  <br>
+                  Робота з таблицею
+                  <br>
+                  Використання циклу for на практиці
+                  <br>
+                  Використання колекції List на практиці
+                  <br>
+                  Перетворення типу String в Int
+                </div>
+              </li>
+              <li>
+                <span class="round">15</span>
+                <div class="head">Відео#15 (DDT підхід та використання різних NUnit атрибутів)</div>
+                <div class="round-separator"></div>
+                <div class="description">
+                  Data Driven Testing в автоматизації
+                  <br>
+                  NUnit атрибути(TestCase, Description, Category, Ignore)
+                </div>
+              </li>
+              <li>
+                <span class="round">16</span>
+                <div class="head">Відео#16 (ScreenShot)</div>
+                <div class="round-separator"></div>
+                <div class="description">
+                  Використання скріншотів на практиці
+                </div>
+              </li>
+              <li>
+                <span class="round">17</span>
+                <div class="head">Відео#17 (База даних та SQL запити)</div>
+                <div class="round-separator"></div>
+                <div class="description">
+                  Підключення до Бази даних
+                  <br>
+                  Виконання SQL запитів та отимання даних з таблиць
+                  <br>
+                  Використання колекції Dictionary на практиці
+                </div>
+              </li>
+              <li>
+                <span class="round">18</span>
+                <div class="head">Відео#18 (Automation QA Interview Questions)</div>
+                <div class="round-separator"></div>
+                <div class="description">
+                  Cписок можливих питань для проходження співбесіди Automation QA
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <span id="ankor_bottom"></span>
+      </div>
+      <div class="curse-section curse-section__right" data-sticky-container>
+        <div class="content_curse content_curse__right" data-sticky data-top-anchor="ankor_top:top"
+          data-btm-anchor="ankor_bottom:bottom">
+          <div class="detail-curse-box">
+            <div class="title-c">Деталі курсу</div>
+            <div class="list-detail-curse">
+              <div class="row collapse">
+                <div class="columns small-8"><span class="title duration-curse">Кількість занять</span></div>
+                <div class="columns small-4"><span class="val">18 відео-уроків</span></div>
+              </div>
+              <div class="row collapse">
+                <div class="columns small-8"><span class="title duration-lecture">Загальна тривалість курсу</span></div>
+                <div class="columns small-4"><span class="val">720 хвилин</span></div>
+              </div>
+              <div class="row collapse">
+                <div class="columns small-8"><span class="title price">Вартість</span></div>
+                <div class="columns small-4"><span class="val">4600 грн</span></div>
+              </div>
+            </div>
+            <div class="button-box">
+              <a id="register-popup-course" href="javascript:void(0);"
+                onclick="ga('send', 'pageview', '/click-reg-practice-curse');" class="button button_icon">записатись на
+                курс<span class="icon"></span></a>
+            </div>
+            <div class="info">Знижка 20% для випускників курсу Основи Тестування</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container container_additional clearfix">
+      <div class="additional-title contrast">Додаткові курси</div>
+      <a href="basic.html">
+        <div class="additional additional_left">
+          <div class="additional-item">
+            <div class="divider"></div>
+            <div class="head">ОСНОВИ ТЕСТУВАННЯ <br> ПРОГРАМНОГО ЗАБЕЗПЕЧЕННЯ</div>
+            <div class="date">Початок 18 грудня</div>
+          </div>
+        </div>
+      </a>
+      <a href="practice.html">
+        <div class="additional additional_right">
+          <div class="additional-item">
+            <div class="divider"></div>
+            <div class="head">Поглиблена <br> практика</div>
+            <div class="date">Початок 25 квітня</div>
+          </div>
+        </div>
+      </a>
+    </section>
+    <section id="contacts" class="container container_screen container_footer">
+      <header class="container_header container_header__absolute clearfix">
+        <span class="header_logo header_logo__white">
+          <a href="index.html">QAschool</a>
+        </span>
+        <a href="javascript:void(0)" class="link-register link-register__dark"
+          onclick="ga('send', 'pageview', '/click-reg-plus');"> <span class="secondary">+</span> Реєстрація</a>
+      </header>
+      <div class="left-pagination">
+        <div class="left-pagination_center">
+          <a href="automation.html#" class="current-page current-page__round dark-gray">
+            07
+            <div class="circle-svg">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="60px" height="60px" viewBox="0 0 16 16"
+                preserveAspectRatio="none">
+                <circle cx="8" cy="8" r="6.215" transform="rotate(90 8 8)"></circle>
+              </svg>
+            </div>
+          </a>
+          <div class="page-name dark-gray">контакти</div>
+        </div>
+      </div>
+      <div class="vertical-center-top contacts-box">
+        <div class="contact-box">
+          <div class="brand animated">
+            <span class="after animated"></span>
+          </div>
+          <div class="info animated">
+            <p class="string">м. Львів, <br> вул. Лемківська 9A</p>
+            <p class="string">+38(067)937-55-23</p>
+            <p class="string lowercase">info@qaschool.com.ua</p>
+          </div>
+        </div>
+        <div class="register-box">
+          <div class="divider"></div>
+          <div class="title">РЕєстрація</div>
+          <form action="#" id="register_form">
+            <div class="row">
+              <div class="columns medium-6">
+                <select id="curse_select" name="course" class="form-control">
+                  <option value="Основи Тестування ПЗ">Основи Тестування ПЗ</option>
+                  <option value="Поглиблена Практика">Поглиблена Практика</option>
+                  <option selected value="Автоматизоване Тестування">Автоматизоване Тестування</option>
+                  <option value="Безкоштовна презентація курсу">Безкоштовна презентація курсу</option>
+                </select>
+              </div>
+              <div class="columns medium-6">
+                <input type="text" name="firstlastname" class="form-control" placeholder="Прізвище та імя">
+              </div>
+            </div>
+            <div class="row">
+              <div class="columns medium-6">
+                <input type="text" name="phonenumber" class="form-control" placeholder="Моб. телефон">
+              </div>
+              <div class="columns medium-6">
+                <input type="text" name="email" class="form-control" placeholder="Електронна пошта">
+              </div>
+            </div>
+            <div class="row">
+              <div class="columns medium-12">
+                <input type="text" name="comment" class="form-control" placeholder="Коментарі">
+                <button type="submit" class="button button_icon">Відправити заявку <span class="icon"></span></button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!--<ul class="navigation navigation__dark list-inline">-->
+      <!--<li><a data-menuanchor="firstPage" class="about_us" href="automation.html#firstPage">Про нас</a></li>
+<li><a data-menuanchor="secondPage" class="goal" href="automation.html#secondPage">мета</a></li>
+<li><a data-menuanchor="thirdPage" class="engineer" href="automation.html#">QA Engineer</a></li>
+<li><a data-menuanchor="fourthPage" class="advantages" href="automation.html#fourthPage">Переваги</a></li>
+<li><a data-menuanchor="fifthPage" class="curse" href="automation.html#fifthPage">курси</a></li>
+<li><a data-menuanchor="sixPage" class="teacher" href="automation.html#sixPage">Викладачі</a></li>
+<li><a data-menuanchor="lastPage" class="contacts" href="automation.html#lastPage">Контакти</a></li>
+-->
+      <!--</ul>-->
+      <div class="copyright">© QASCHOOL, 2015 - 2019 Ця сторінка на <a href="ru/automation.html">російській мові</a>
+      </div>
+    </section>
+  </div>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="http://cdn.jsdelivr.net/vivus/latest/vivus.min.js"></script>
+
+  <script src="assets/js/fetch.js"></script>
+  <!--<script src="assets/js/snap.svg.js"></script>-->
+  <!--google maps-->
+  <!--<script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=true"></script>-->
+  <!--<script type="text/javascript" src="assets/js/gmaps.js"></script>-->
+  <script type="text/javascript" src="assets/js/jquery.validate.min.js"></script>
+  <!--<script type="text/javascript" src="assets/js/additional-methods.min.js"></script>-->
+
+  <script src="assets/js/jquery.matchHeight-min.js"></script>
+  <script src="assets/js/jquery.fullpage.min.js"></script>
+  <script src="assets/js/jquery.ikSelect.min.js"></script>
+  <script src="assets/js/typed.min.js"></script>
+  <script src="assets/js/app-v=0.2.js"></script>
+
+  <!-- Код тега ремаркетинга Google -->
+  <script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 877812832;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+  /* ]]> */
+  </script>
+  <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+  </script>
+  <noscript>
+    <div style="display:inline;">
+      <img height="1" width="1" style="border-style:none;" alt=""
+        src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/877812832/?value=0&guid=ON&script=0" />
+    </div>
+  </noscript>
+</body>
+
+</html>

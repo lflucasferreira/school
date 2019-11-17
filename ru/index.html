@@ -1,0 +1,1582 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="description"
+        content="Львовская школа тестирования QA School предлагает качественное и недорогое обучение для будущих IT специалистов: QA тестер (тестировщик, инженер)"/>
+  <meta name="keywords"
+        content="QA school, школа тестирования львов, Quality Assurance, QA тестер, тестировщик, QA инженер, школа тестирования ПО, школа qa тестеров, Львов"/>
+  <title>QA school - курсы тестирования, Львовская IT школа тестирования, учит QA тестеров (тестировщиков, инженеров)</title>
+  <link rel="stylesheet" href="../assets/css/animate.min.css">
+  <link rel="stylesheet" href="../assets/css/app.min-v=0.4.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" rel="stylesheet"/>
+  <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-80678923-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '370162520543067');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+                 src="https://www.facebook.com/tr?id=370162520543067&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Facebook Pixel Code -->
+</head>
+<body>
+
+<div id="register_popup" data-reveal class="register-box reveal" data-animation-in="slide-in-down"
+     data-animation-out="slide-out-up">
+  <span class="close hide-for-small-only" data-close></span>
+  <span class="close close-sm show-for-small-only" data-close>x</span>
+  <div class="divider"></div>
+  <div class="title">Регистрация</div>
+  <form action="#" id="register_form_popup">
+    <div class="row">
+      <div class="columns medium-6">
+        <select id="curse_select_popup" name="course" class="form-control">
+          <option disabled selected>Выберите курс</option>
+          <option value="Основи Тестування ПЗ">Основы Тестирование ПО</option>
+          <option value="Поглиблена Практика">Углубленная Практика</option>
+          <option value="Автоматизоване Тестування">Автоматизированное Тестирование</option>
+          <option value="Безкоштовна презентація курсу">Бесплатная презентация курса</option>
+        </select>
+      </div>
+      <div class="columns medium-6">
+        <input type="text" name="firstlastname" class="form-control" placeholder="Фамилия и имя">
+      </div>
+    </div>
+    <div class="row">
+      <div class="columns medium-6">
+        <input type="text" name="phonenumber" class="form-control" placeholder="Моб. телефон">
+      </div>
+      <div class="columns medium-6">
+        <input type="text" name="email" class="form-control" placeholder="Электронная почта">
+      </div>
+    </div>
+    <div class="row">
+      <div class="columns medium-12">
+        <input type="text" name="comment" class="form-control" placeholder="Комментарии">
+        <button type="submit" class="button button_icon">Отправить заявку <span class="icon"></span></button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div id="register_success" data-reveal class="register-box reveal" data-animation-in="slide-in-down"
+     data-animation-out="slide-out-up">
+  <span class="close hide-for-small-only" data-close></span>
+  <span class="close close-sm show-for-small-only" data-close>x</span>
+  <div class="divider"></div>
+  <div class="title">Регистрация</div>
+  <div class="common-title">Заявка отправлена</div>
+  <div class="text"></div>
+  <button type="button" data-close class="button button_icon"><i class="icon-check"></i> Ok</button>
+</div>
+
+<nav class="navigation-wrap">
+  <ul id="myMenu" class="navigation list-inline animated">
+    <li><a data-menuanchor="about" class="about_us" href="index.html#about">О нас</a></li>
+    <li><a data-menuanchor="goal" class="goal" href="index.html#goal">Цель</a></li>
+    <li><a data-menuanchor="qaengineer" class="engineer" href="index.html#qaengineer">QA Engineer</a></li>
+    <li><a data-menuanchor="advantages" class="advantages" href="index.html#advantages">Преимущества</a></li>
+    <li><a data-menuanchor="courses" class="curse" href="index.html#courses">Курсы</a></li>
+    <li><a data-menuanchor="teachers" class="teacher" href="index.html#teachers">Учителя</a></li>
+    <li><a data-menuanchor="feedbacks" class="feedbacks" href="index.html#feedbacks">Отзывы</a></li>
+    <li><a data-menuanchor="contacts" class="contacts" href="index.html#contacts">Контакты</a></li>
+  </ul>
+</nav>
+
+<div id="fullpage" class="wrapper">
+  <div class="section first height-fix">
+    <section id="about_us" class="container container_screen container_first height-fix">
+      <div class="container_banner fade-in"></div>
+      <div class="container-icon vertical-center">
+        <svg version="1.1" class="rectangle-size" id="rectangle" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+    	 viewBox="-25 -25 530 531" style="enable-background:new -25 -25 530 531;" xml:space="preserve">
+                    <style type="text/css">
+                        .st1 {
+                          fill: none;
+                          stroke-miterlimit: 10;
+                        }
+                    </style>
+                    <path class="st1 stroke-svg rectangle rectangle-load" d="M480.2,240.5V1c0-0.6-0.4-1-1-1H1.3c-0.6,0-1,0.4-1,1v478c0,0.6,0.4,1,1,1H475c2.8,0,5-2.2,5-5L480.2,240.5z"/>
+                    </svg>
+      </div>
+      <header class="container_header clearfix animated">
+                    <span class="header_logo header_logo__dark">
+                        <a href="index.html#about">QAschool</a>
+                    </span>
+        <a href="javascript:void(0)" class="link-register" onclick="ga('send', 'pageview', '/click-reg-plus');"> <span
+                class="secondary">+</span> Регистрация</a>
+      </header>
+      <div class="left-pagination animated">
+        <div class="left-pagination_center">
+          <a href="index.html#" class="current-page current-page__round">
+            01
+            <div class="circle-svg">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="60px" height="60px"
+                   viewBox="0 0 16 16" preserveAspectRatio="none">
+                <circle cx="8" cy="8" r="6.215" transform="rotate(90 8 8)"></circle>
+              </svg>
+
+            </div>
+          </a>
+          <div class="page-name">О нас</div>
+        </div>
+
+        <div class="left-pagination_bottom">
+          <div class="divider-vertical"></div>
+          <a href="index.html#" class="next-page-num">02</a>
+        </div>
+      </div>
+      <div class="vertical-center text-center">
+        <span class="divider"></span>
+        <div class="head typed"></div>
+        <div class="animated box-content">
+          <h1 class="head-common">Основана ведущими специалистами-практиками</h1>
+          <div class="text">
+            Подготовка молодых специалистов QA (тестеров) по такому направлению, как:
+            </br>
+            "Обеспечение качества программного обеспечения". Нашими специалистами была разработана сбалансированная
+            </br>
+            программа, в которой сочетаются углубленное изучение теоретического материала и практические занятия.
+          </div>
+          <ul class="social-box list-inline">
+            <li><a class="instagram" href="https://www.instagram.com/qaschool.official/"></a></li>
+            <li><a class="facebook" href="https://www.facebook.com/QA-School-1802123240020126"></a></li>
+            <li><a class="vk" href="https://new.vk.com/qaschool.lviv"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mouse-icon">
+        <svg version="1.1" id="mouse_svg" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+                     viewBox="-15 4 28 43" style="enable-background:new -15 4 28 43;" xml:space="preserve">
+                <path id="mouse-center" class="mouse-scroll mouseScrollAnimate" d="M-1,21L-1,21c-1.1,0-2-0.9-2-2v-4c0-1.1,0.9-2,2-2l0,0c1.1,0,2,0.9,2,2v4C1,20.1,0.1,21-1,21z"/>
+                <path id="mouse-border"  d="M-1,5L-1,5c7.2,0,13,5.8,13,13v15c0,7.2-5.8,13-13,13h0c-7.2,0-13-5.8-13-13V18C-14,10.8-8.2,5-1,5L-1,5z"/>
+                </svg>
+      </div>
+    </section>
+  </div>
+  <div class="section second side height-fix">
+    <section id="goal" class="container container_screen container_second container_double clearfix height-fix">
+      <header class="container_header container_header__absolute clearfix">
+                    <span class="header_logo header_logo__dark">
+                        <a href="index.html#about">QAschool</a>
+                    </span>
+        <a href="javascript:void(0)" class="link-register link-register__dark"
+           onclick="ga('send', 'pageview', '/click-reg-plus');"> <span class="primary">+</span> Регистрация</a>
+      </header>
+      <div class="lift lift__left double_left">
+        <div class="left-pagination">
+          <div class="left-pagination_center">
+            <a href="index.html#" class="current-page current-page__round current-page__secondary">
+              02
+              <div class="circle-svg">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="60px" height="60px"
+                     viewBox="0 0 16 16" preserveAspectRatio="none">
+                  <circle cx="8" cy="8" r="6.215" transform="rotate(90 8 8)"></circle>
+                </svg>
+
+              </div>
+            </a>
+            <div class="page-name">Цель</div>
+          </div>
+
+          <div class="left-pagination_bottom">
+            <div class="divider-vertical"></div>
+            <a href="index.html#" class="next-page-num">03</a>
+          </div>
+        </div>
+        <div class="content animated">
+          <div>НАША</div>
+          <div>ЦЕЛЬ</div>
+        </div>
+        <div class="double_left_content__white show-for-small-only">
+          предоставить вам необходимые знания
+          </br>
+          и практические навыки
+        </div>
+        <div class="credo show-for-small-only">QA sсhool — стань лучшим!</div>
+      </div>
+      <div class="lift lift__right side-b double_right show-for-medium">
+        <div class="content vertical-center-top animated">
+          Предоставить вам необходимые
+          <br>
+          знания и практические навыки
+        </div>
+        <div class="credo animated">QA SCHOOL - ПОМОЖЕМ СТАТЬ ЛУЧШИМ</div>
+      </div>
+      <div class="container-icon vertical-center">
+        <svg version="1.1" id="rectangle_drop" class="rectangle-size" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+                     viewBox="235 -240 530 529" style="enable-background:new 235 -240 530 529;" xml:space="preserve">
+                    <polyline class="stroke-svg deg-s grey" points="740,164 740,264 639,264 "/>
+                    <polyline class="stroke-svg deg-s grey" points="639,-215 740,-215 740,-114 "/>
+                    <polyline class="stroke-svg deg-s yellow" points="361,264 260,264 260,164 "/>
+                    <polyline class="stroke-svg deg-s yellow" points="260,-114 260,-215 361,-215 "/>
+
+                    <line class="stroke-svg st1 yellow animated scale scale-x scale_left" x1="360" y1="-215" x2="500" y2="-215"/>
+                    <line class="stroke-svg st2 grey animated scale scale-x scale_right" x1="500" y1="-215" x2="640" y2="-215"/>
+                    <line class="stroke-svg st1 yellow animated scale scale-y scale_bottom" x1="260" y1="165" x2="260" y2="25"/>
+                    <line class="stroke-svg st2 yellow animated scale scale-y scale_top" x1="260" y1="25" x2="260" y2="-115"/>
+                    <line class="stroke-svg st1 grey animated scale scale-y scale_bottom" x1="740" y1="165" x2="740" y2="25"/>
+                    <line class="stroke-svg st2 grey animated scale scale-y scale_top" x1="740" y1="25" x2="740" y2="-115"/>
+                    <line class="stroke-svg st1 grey animated scale scale-x scale_right" x1="640" y1="264" x2="500" y2="264"/>
+                    <line class="stroke-svg st2 yellow animated scale scale-x scale_left" x1="500" y1="264" x2="360" y2="264"/>
+                </svg>
+      </div>
+    </section>
+  </div>
+  <div class="section third">
+    <section id="engineer" class="container container_screen container_third clearfix">
+      <img class="man-img" src="../assets/img/third-image.png"
+           alt="Quality Assurance інженер (тест-інженер, тестувальник) - фахівець, який займається покращенням процесу розробки ПЗ, запобіганням появи недоліків та виявленням помилок в кінцевому продукті.">
+      <div class="container-icon vertical-center">
+        <svg version="1.1" id="elips" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+    	 viewBox="78 -77 635 635" style="enable-background:new 78 -77 635 635;" xml:space="preserve">
+                        <style type="text/css">
+                        .st0 {
+                          stroke-width: 50;
+                          stroke-miterlimit: 10;
+                        }
+                    </style>
+                        <circle class="st0 elips animated" cx="395.5" cy="240.5" r="292.5"/>
+                    </svg>
+      </div>
+      <header class="container_header container_header__absolute clearfix">
+                    <span class="header_logo header_logo__dark">
+                        <a href="index.html#about">QAschool</a>
+                    </span>
+        <a href="javascript:void(0)" class="link-register" onclick="ga('send', 'pageview', '/click-reg-plus');"> <span
+                class="primary">+</span> Регистрация</a>
+      </header>
+      <div class="half-box half-box__left">
+        <div class="left-pagination">
+          <div class="left-pagination_center">
+            <a href="index.html#" class="current-page current-page__round">
+              03
+              <div class="circle-svg">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="60px" height="60px"
+                     viewBox="0 0 16 16" preserveAspectRatio="none">
+                  <circle cx="8" cy="8" r="6.215" transform="rotate(90 8 8)"></circle>
+                </svg>
+              </div>
+            </a>
+            <div class="page-name">QA Engineer</div>
+          </div>
+
+          <div class="left-pagination_bottom">
+            <div class="divider-vertical"></div>
+            <a href="index.html#" class="next-page-num">04</a>
+          </div>
+        </div>
+      </div>
+      <div class="vertical-center-top content-container">
+        <div class="divider"></div>
+        <div class="head animated">QA Engineer <br> <span> кто это?</span></div>
+        <div class="flex-box hide-for-small-only">
+          <div class="content content__left animated">
+            <div class="title contrast">
+
+              Quality Assurance инженер (тест-инженер, тестировщик) – специалист,
+              </br>
+              занимающийся  улучшением процесса разработки ПО, предотвращением
+              </br>
+              недостатков и выявлением ошибок в конечном продукте.
+            </div>
+            <div class="text">
+              <p>
+                QA инженер - это та специальность, которая пользуется большим спросом в IТ-индустрии.
+                </br>
+                Этот факт обусловлен объективными причинами. Во-первых, из-за тотальной
+                </br>
+                компьютеризации всех областей жизни сфера информационных технологий
+                </br>
+                активно развивается. Во-вторых, разработками и усовершенствованием продукции
+                </br>
+                данной отрасли занимаются множество компаний, конкуренция велика, растет и
+                </br>
+                количество продуктов, которые появляются на рынке. Чтобы эти продукты были
+                </br>
+                совершенными и качественными, требуется большое количество соответствующих специалистов.
+              </p>
+              <p>
+                Этими же причинами обусловлен и высокий уровень оплаты труда тестеров. В Украине
+                </br>
+                в среднем QA инженер получает заработную плату в размере от 600 (Junior)
+                </br>
+                до 2700 (Senior) долларов. Наша школа по подготовке тестировщиков программного
+                </br>
+                обеспечения позволит узнать основы и тонкости данной профессии и получить
+                </br>
+                высокий уровень как теоретических, так и практических знаний и навыков.
+              </p>
+              <p>
+                Профессия QA инженер (тестер) – одна из наиболее перспективных  специальностей
+                </br>
+                (после программиста) в сфере информационных технологий. Кроме того, это самый
+                </br>
+                легкий и самый быстрый способ попасть в сферу IT, поскольку требует меньше
+                </br> специальных знаний и времени для усвоения (если сравнивать с программированием),
+                </br>
+                а сама теоретическая база несколько проще для понимания и усвоения.
+              </p>
+            </div>
+          </div>
+          <div class="content content__right animated">
+            <div class="title contrast">Будь хто має змогу <br>
+              приєднатися до сфери IT
+            </div>
+            <div class="text">
+              <p>
+                Присоединиться к успешным командам
+                <br>
+                тестировщиков-профессионалов,
+                <br>
+                получающим от работы удовольствие, просто.
+              </p>
+            </div>
+            <ul class="list list__icon">
+              <li class="salary">
+                <span class="bold-md">$600 - $2700+</span><br>
+                заработная плата
+              </li>
+              <li class="vacancy">
+                <span class="bold-md">3000+ вакансий</span><br>
+                по всей территории Украины
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--mobile block show-->
+        <div class="show-for-small-only mobile-text">
+          <div class="title contrast">
+            Quality Assurance инженер (тест-инженер, тестировщик) – специалист, занимающийся  улучшением процесса
+            разработки ПО, предотвращением недостатков и выявлением ошибок в конечном продукте.
+          </div>
+          <div class="text">
+            QA инженер - это та специальность, которая пользуется большим спросом в IТ-индустрии. Этот факт обусловлен
+            объективными причинами. Во-первых, из-за тотальной компьютеризации всех областей жизни сфера информационных
+            технологий активно развивается. Во-вторых, разработками и усовершенствованием продукции данной отрасли
+            занимаются множество компаний, конкуренция велика, растет и количество продуктов, которые появляются на
+            рынке. Чтобы эти продукты были совершенными и качественными, требуется большое количество соответствующих
+            специалистов.
+          </div>
+          <div class="text">
+            Этими же причинами обусловлен и высокий уровень оплаты труда тестеров. В Украине в среднем QA инженер
+            получает заработную плату в размере от 600 (Junior) до 2700 (Senior) долларов. Наша школа по подготовке
+            тестировщиков программного обеспечения позволит узнать основы и тонкости данной профессии и получить высокий
+            уровень как теоретических, так и практических знаний и навыков.
+          </div>
+          <div class="text">
+            Профессия QA инженер (тестер) – одна из наиболее перспективных  специальностей (после программиста) в сфере
+            информационных технологий. Кроме того, это самый легкий и самый быстрый способ попасть в сферу IT, поскольку
+            требует меньше специальных знаний и времени для усвоения (если сравнивать с программированием), а сама
+            теоретическая база несколько проще для понимания и усвоения.
+          </div>
+          <div class="title contrast">
+            Будь хто має змогу <br>
+            приєднатися до сфери IT
+          </div>
+          <div class="text">
+            Присоединиться к успешным командам тестировщиков-профессионалов, получающим от работы удовольствие, просто.
+          </div>
+          <ul class="list list__icon text-left">
+            <li class="salary">
+              <span class="bold-md">$600 - $2700+</span><br>
+              заработная плата
+            </li>
+            <li class="vacancy">
+              <span class="bold-md">3000+ вакансий</span><br>
+              по всей территории Украины
+            </li>
+          </ul>
+        </div>
+        <!--END: mobile block show-->
+      </div>
+    </section>
+  </div>
+  <div class="section four height-fix">
+    <section id="advantages" class="container container_screen container_four height-fix">
+      <div class="container-icon vertical-center">
+        <svg version="1.1" id="rhombus" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+    	 viewBox="50 -70 580 620" style="enable-background:new 50 -70 580 620;" xml:space="preserve">
+                    <style type="text/css">
+                    .st3 {
+                      fill: none;
+                      stroke-width: 50;
+                      stroke-miterlimit: 10;
+                    }
+                </style>
+                    <g>
+                        <path class="st3 rhombus" d="M605,240V110.3L340-41L75,110.3v259.9l265,151.3l265-151.3V240z"/>
+                    </g>
+                    </svg>
+      </div>
+
+      <header class="container_header container_header__absolute clearfix">
+                    <span class="header_logo header_logo__white">
+                        <a href="index.html#about">QAschool</a>
+                    </span>
+        <a href="javascript:void(0)" class="link-register link-register__dark"
+           onclick="ga('send', 'pageview', '/click-reg-plus');"> <span class="secondary">+</span> Регистрация</a>
+      </header>
+      <div class="left-pagination">
+        <div class="left-pagination_center">
+          <a href="index.html#" class="current-page current-page__round dark-gray">
+            04
+            <div class="circle-svg">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="60px" height="60px"
+                   viewBox="0 0 16 16" preserveAspectRatio="none">
+                <circle cx="8" cy="8" r="6.215" transform="rotate(90 8 8)"></circle>
+              </svg>
+
+            </div>
+          </a>
+          <div class="page-name dark-gray">Преимущества</div>
+        </div>
+
+        <div class="left-pagination_bottom">
+          <div class="divider-vertical"></div>
+          <a href="index.html#" class="next-page-num">05</a>
+        </div>
+      </div>
+      <div class="vertical-center text-center">
+        <div class="custom-tabs ru custom-tabs__swipe clearfix">
+          <!--desktop pager-->
+          <ul data-tabs="mouseover" class="list link-tabs hide-for-small-only animated">
+            <li class="active"><a data-href="#first" href="index.html#">Менторская поддержка <span
+                    class="line"></span></a></li>
+            <li><a data-href="#second" href="index.html#">Спикеры-практики <span class="line"></span></a></li>
+            <li><a data-href="#third" href="index.html#">Сбалансированная программа <span class="line"></span></a></li>
+            <li><a data-href="#fourth" href="index.html#">Уникальная практика <span class="line"></span></a></li>
+            <li><a data-href="#fifth" href="index.html#">База данных <span class="line"></span></a></li>
+            <li><a data-href="#sixth" href="index.html#">Поиск вакансий <span class="line"></span></a></li>
+          </ul>
+          <div class="tabs-content-box animated">
+            <div id="first" class="content-tabs active">
+              <div class="wrap-icon">
+                <div class="icon first"></div>
+              </div>
+
+              <div class="title">Менторская поддержка</div>
+              <div class="text">
+                Осуществление менторской поддержки на протяжении всего курса. Четкие и полные
+                ответы на вопросы, возникающие в течение прохождения курса, а также разбор и анализ сложностей, которые
+                могут возникать во время выполнения домашних заданий.
+              </div>
+            </div>
+            <div id="second" class="content-tabs">
+              <div class="wrap-icon">
+                <div class="icon second"></div>
+              </div>
+              <div class="title">Спикеры-практики</div>
+              <div class="text">
+                Делятся опытом практики из ведущих IT -компаний Львова («SoftServe»,
+                «ELEKS», «Edvantis», «Ciklum», «ABTO») с многолетним опытом успешных проектов по разработке ПО. Вы
+                получите ценные советы, узнаете множество секретов, связанных с разработкой продукта и его
+                тестированием, получите неоценимый опыт от мастеров своего дела.
+              </div>
+            </div>
+            <div id="third" class="content-tabs">
+              <div class="wrap-icon">
+                <div class="icon third"></div>
+              </div>
+              <div class="title">Сбалансированная программа</div>
+              <div class="text">
+                Предлагаем сбалансированную и максимально эффективную программу, которая даст отличный старт в сфере
+                проверки и анализа инновационных продуктов. Мы уделяется достаточно времени
+                подробному изучению теории и практической стороне. В результате вы получаете достаточный уровень для
+                начала профессиональной карьеры в IT.
+              </div>
+            </div>
+            <div id="fourth" class="content-tabs">
+              <div class="wrap-icon">
+                <div class="icon fourth"></div>
+              </div>
+              <div class="title">Уникальная практика</div>
+              <div class="text">
+                Проводим практические занятия по разработке ПО в команде с программистом, менеджером по проектам  и
+                заказчиком. Это позволит понять процесс создания продукта от идеи до согласования.
+              </div>
+            </div>
+            <div id="fifth" class="content-tabs">
+              <div class="wrap-icon">
+                <div class="icon fifth"></div>
+              </div>
+              <div class="title">База данных</div>
+              <div class="text">
+                Предлагаем попрактиковаться в работе с базой данных реального проекта с использованием MS SQL Server
+                (одна из систем управления базами данных). Это позволит закрепить теоретические знания на практике.
+              </div>
+            </div>
+            <div id="sixth" class="content-tabs">
+              <div class="wrap-icon">
+                <div class="icon sixth"></div>
+              </div>
+              <div class="title">Поиск вакансий</div>
+              <div class="text">
+                После завершения курса школа тестирования ПО во Львове организует пробное собеседование с техническим
+                специалистом. Обеспечиваем помощь HR-специалистов в подготовке резюме, поиске горячих вакансий и
+                трудоустройстве.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--mobile pager-->
+      <ul data-tabs="click" class="list-inline pager-mobile show-for-small-only">
+        <li class="active"><a data-href="#first"></a></li>
+        <li><a data-href="#second"></a></li>
+        <li><a data-href="#third"></a></li>
+        <li><a data-href="#fourth"></a></li>
+        <li><a data-href="#fifth"></a></li>
+        <li><a data-href="#sixth"></a></li>
+      </ul>
+      <!--<ul class="navigation navigation__dark list-inline">-->
+      <!--<li><a data-menuanchor="about" class="about_us" href="index.html#about">О нас</a></li>
+<li><a data-menuanchor="goal" class="goal" href="index.html#goal">Цель</a></li>
+<li><a data-menuanchor="qaengineer" class="engineer" href="index.html#">QA Engineer</a></li>
+<li><a data-menuanchor="advantages" class="advantages" href="index.html#advantages">Преимущества</a></li>
+<li><a data-menuanchor="courses" class="curse" href="index.html#courses">Курсы</a></li>
+<li><a data-menuanchor="teachers" class="teacher" href="index.html#teachers">Преподаватели</a></li>
+<li><a data-menuanchor="contacts" class="contacts" href="index.html#contacts">Контакты</a></li>
+-->
+      <!--</ul>-->
+    </section>
+  </div>
+  <div class="section fifth">
+    <section id="curse" class="container container_screen container_fifth">
+      <div class="container-icon vertical-center">
+        <!--icon background-->
+      </div>
+      <header class="container_header container_header__absolute clearfix">
+                    <span class="header_logo header_logo__white">
+                        <a href="index.html#about">QAschool</a>
+                    </span>
+        <a href="javascript:void(0)" class="link-register link-register__dark"
+           onclick="ga('send', 'pageview', '/click-reg-plus');"> <span class="secondary">+</span> Регистрация</a>
+      </header>
+      <div class="left-pagination">
+        <div class="left-pagination_center">
+          <a href="index.html#" class="current-page current-page__round dark-gray">
+            05
+            <div class="circle-svg">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="60px" height="60px"
+                   viewBox="0 0 16 16" preserveAspectRatio="none">
+                <circle cx="8" cy="8" r="6.215"></circle>
+              </svg>
+            </div>
+          </a>
+          <div class="page-name dark-gray">Курсы</div>
+        </div>
+
+        <div class="left-pagination_bottom">
+          <div class="divider-vertical"></div>
+          <a href="index.html#" class="next-page-num">06</a>
+        </div>
+      </div>
+      <div class="vertical-center text-center">
+        <div class="box-tests clearfix animated">
+          <div class="box-test">
+            <div class="box-test_item">
+              <div class="divider animated">
+              </div>
+              <div class="header animated">
+                <div class="title ru">Основы <br> тестирования ПО</div>
+                <div class="start-box">
+                  Начало 18 декабря
+                </div>
+              </div>
+              <div class="body animated">
+                <div class="content">
+                  Курс разработан специально для тех, кто хочет освоить профессию QA-инженера. Программа является
+                  сбалансированной, уделяется внимание как детальному изучению теории, так и практическим навыкам.
+                </div>
+                <a href="basic.html" class="button button_icon">Подробнее <span class="icon"></span></a>
+              </div>
+              <a href="presentation.html" class="footer active bordered">
+                Бесплатная презентация <br> курса 29 ноября
+                <span class="icon"></span>
+              </a>
+            </div>
+          </div>
+          <div class="box-test">
+            <div class="box-test_item">
+              <div class="divider animated">
+              </div>
+              <div class="header animated">
+                <div class="title ru">Углубленная <br>Практика</div>
+                <div class="start-box">
+                  Начало 25 апреля
+                </div>
+              </div>
+              <div class="body animated">
+                <div class="content">
+                  Этот курс посвящен практическим занятиям. Разработан специально для тех, кто обладает высоким уровнем
+                  теоретических знаний, хочет усовершенствовать свои практические навыки и получить опыт работы в
+                  реальном проекте.
+                </div>
+                <a href="practice.html" class="button button_icon">Подробнее <span class="icon"></span></a>
+              </div>
+              <div class="footer">
+                Скидка 40% для выпускников курса Основы Тестирование
+              </div>
+            </div>
+          </div>
+          <div class="box-test">
+            <div class="box-test_item">
+              <div class="divider animated">
+              </div>
+              <div class="header animated">
+                <div class="title ru">Автоматизированное <br> Тестирование</div>
+                <div class="start-box">
+                  ОНЛАЙН-ВИДЕО КУРС
+                </div>
+              </div>
+              <div class="body animated">
+                <div class="content">
+                  Курс автоматизированного тестирования (qa automation) разработан специально для людей как без 
+                  особой предварительной подготовки, так и для тестировщиков которые желают карьерного роста. 
+                  На занятиях мы рассмотрим все подходы автоматизации веб приложений с помощью популярного инструмента Selenium WebDriver.
+                </div>
+                <a href="automation.html" class="button button_icon">Подробнее <span class="icon"></span></a>
+              </div>
+              <div class="footer">
+                Скидка 20% для выпускников курса Основы Тестирование
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--<ul class="navigation navigation__dark list-inline">-->
+      <!--<li><a data-menuanchor="about" class="about_us" href="index.html#about">О нас</a></li>
+<li><a data-menuanchor="goal" class="goal" href="index.html#goal">Цель</a></li>
+<li><a data-menuanchor="qaengineer" class="engineer" href="index.html#">QA Engineer</a></li>
+<li><a data-menuanchor="advantages" class="advantages" href="index.html#advantages">Преимущества</a></li>
+<li><a data-menuanchor="courses" class="curse" href="index.html#courses">Курсы</a></li>
+<li><a data-menuanchor="teachers" class="teacher" href="index.html#teachers">Преподаватели</a></li>
+<li><a data-menuanchor="contacts" class="contacts" href="index.html#contacts">Контакты</a></li>
+-->
+      <!--</ul>-->
+    </section>
+  </div>
+  <div class="section six">
+    <section id="teacher" class="container container_screen container_sixth container_double clearfix">
+      <header class="container_header container_header__absolute clearfix">
+                    <span class="header_logo header_logo__white">
+                        <a href="index.html#about">QAschool</a>
+                    </span>
+        <a href="javascript:void(0)" class="link-register" onclick="ga('send', 'pageview', '/click-reg-plus');"> <span
+                class="contrast">+</span> Регистрация</a>
+      </header>
+      <div class="double_left">
+        <div class="left-pagination">
+          <div class="left-pagination_center">
+            <a href="index.html#" class="current-page current-page__round dark-gray">
+              06
+              <div class="circle-svg">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="60px" height="60px"
+                     viewBox="0 0 16 16" preserveAspectRatio="none">
+                  <circle cx="8" cy="8" r="6.215" transform="rotate(90 8 8)"></circle>
+                </svg>
+              </div>
+            </a>
+            <div class="page-name dark-gray">Учителя</div>
+          </div>
+
+          <div class="left-pagination_bottom">
+            <div class="divider-vertical"></div>
+            <a href="index.html#" class="next-page-num">07</a>
+          </div>
+        </div>
+        <div class="head show-for-small-only">
+          <div class="divider"></div>
+          <br>
+          <span>Учителя</span>
+        </div>
+      </div>
+      <div class="head head-top hide-for-small-only">
+        <div class="divider"></div>
+        <br>
+        <span class="animated">Учителя</span>
+      </div>
+      <div class="content vertical-center text-center hide-for-small-only">
+        <!--DESKTOP-->
+        <div class="custom-tabs clearfix teacher-tabs">
+          <!--desktop pager-->
+          <ul data-tabs="mouseover" class="list link-tabs vertical-center-top hide-for-small-only animated">
+            <li class="active"><a data-href="#firstTeacher" href="index.html#">Олександр Струков<span
+                    class="animated line"></span></a></li>
+            <li><a data-href="#secondTeacher" href="index.html#">Андрій Волошенко<span class="animated line"></span></a></li>
+            <li><a data-href="#thirdTeacher" href="index.html#">Наталя Коваль<span class="animated line"></span></a></li>
+            <li><a data-href="#fourthTeacher" href="index.html#">Тарас Фігурняк<span class="animated line"></span></a></li>
+            <li><a data-href="#fifthTeacher" href="index.html#">Юрій Олійник<span class="animated line"></span></a></li>
+            <li><a data-href="#sixthTeacher" href="index.html#">Роман Шайда<span class="animated line"></span></a></li>
+          </ul>
+          <!--desktop tabs content-->
+          <div class="tabs-content-box clearfix">
+            <div id="firstTeacher" class="content-tabs clearfix active">
+              <div class="img-box vertical-center">
+                <div class="wrap-img animated">
+                  <img class="" src="../assets/img/5.png" alt="Олександр Струков - викладач школи QA School">
+                  <div class="box-shadow animated"></div>
+                </div>
+              </div>
+              <div class="right-teacher-box">
+                <div class="content-top animated">
+                  <div class="experience-box clearfix">
+                    <span class="num">8</span>
+                    <div class="head">років досвіду
+                      <span>у сфері Quality Assurance</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="margin"></div>
+                <div class="content-bottom animated">
+                  <div class="comment-box">
+                    <div class="head">
+                      QA Coordinator в компанії GlobalLogic.
+                    </div>
+                    <div class="text">
+                      Олександр починав свою кар’єру в компанії ELEKS та обіймав такі позиції
+                      як: Business analitic, Project manager, QA Lead. Олександр займається
+                      Performance, Load, Stress а також Автоматизованим тестуванням.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="secondTeacher" class="content-tabs clearfix">
+              <div class="img-box vertical-center">
+                <div class="wrap-img animated">
+                  <img class="" src="../assets/img/4.png" alt="Андрій Волошенко - викладач школи QA School">
+                  <div class="box-shadow animated"></div>
+                </div>
+              </div>
+              <div class="right-teacher-box">
+                <div class="content-top animated">
+                  <div class="experience-box clearfix">
+                    <span class="num">7</span>
+                    <div class="head">років досвіду
+                      <span>у сфері Quality Assurance</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="margin"></div>
+                <div class="content-bottom animated">
+                  <div class="comment-box">
+                    <div class="head">
+                      Спеціаліст з багаторічним досвідом, працював в таких компаніях як
+                      SoftServe, Luxoft, Ciklum.
+                    </div>
+                    <div class="text">
+                      Успішно реалізував більше 60 комерційних проектів в різних напрямках.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="thirdTeacher" class="content-tabs clearfix">
+              <div class="img-box vertical-center">
+                <div class="wrap-img animated">
+                  <img class="" src="../assets/img/1.png" alt="Наталя Коваль - викладач школи QA School">
+                  <div class="box-shadow animated"></div>
+                </div>
+              </div>
+              <div class="right-teacher-box">
+                <div class="content-top animated">
+                  <div class="experience-box clearfix">
+                    <span class="num">5</span>
+                    <div class="head">років досвіду
+                      <span>у сфері Quality Assurance</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="margin"></div>
+                <div class="content-bottom animated">
+                  <div class="comment-box">
+                    <div class="head">
+                      QC Engineer в компанії Intellias.
+                    </div>
+                    <div class="text">
+                      Займається як ручним, так і автоматизованим тестуванням та
+                      спеціалізується на тестуванні RESTful веб-сервісів. Наталя також є
+                      активним учасником різних заходів, присвячених QA, зокрема була
+                      спікером WTM16 та QAStandup June2016.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="fourthTeacher" class="content-tabs clearfix">
+              <div class="img-box vertical-center">
+                <div class="wrap-img animated">
+                  <img class="" src="../assets/img/2.png" alt="Тарас Фігурняк - викладач школи QA School">
+                  <div class="box-shadow animated"></div>
+                </div>
+              </div>
+              <div class="right-teacher-box">
+                <div class="content-top animated">
+                  <div class="experience-box clearfix">
+                    <span class="num">5</span>
+                    <div class="head">років досвіду
+                      <span>у сфері Quality Assurance</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="margin"></div>
+                <div class="content-bottom animated">
+                  <div class="comment-box">
+                    <div class="head">
+                      Більше 5-ти років в ІТ.
+                    </div>
+                    <div class="text">
+                      Тарас починав свою кар’єру в компанії SoftServe в якості Manual Test
+                      Engineer. Зараз працює в компанії Edvantis та виконує роль Automation
+                      QA.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="fifthTeacher" class="content-tabs clearfix">
+              <div class="img-box vertical-center">
+                <div class="wrap-img animated">
+                  <img class="" src="../assets/img/3.png" alt="Юрій Олійник - викладач школи QA School">
+                  <div class="box-shadow animated"></div>
+                </div>
+              </div>
+              <div class="right-teacher-box">
+                <div class="content-top animated">
+                  <div class="experience-box clearfix">
+                    <span class="num">6</span>
+                    <div class="head">років досвіду
+                      <span>у сфері Quality Assurance</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="margin"></div>
+                <div class="content-bottom animated">
+                  <div class="comment-box">
+                    <div class="head">
+                      Більше 6 років досвіду в тестуванні мобільних додатків та
+                      WEB-проектів.
+                    </div>
+                    <div class="text">
+                      Юрій – QA Engineer в компанії N-iX. Різносторонній
+                      спеціаліст з навиками атоматизації, тестування продуктивності, REST API
+                      тестування та інше
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="sixthTeacher" class="content-tabs clearfix">
+              <div class="img-box vertical-center">
+                <div class="wrap-img animated">
+                  <img class="" src="../assets/img/0.png" alt="Роман Шайда - викладач школи QA School">
+                  <div class="box-shadow animated"></div>
+                </div>
+              </div>
+              <div class="right-teacher-box">
+                <div class="content-top animated">
+                  <div class="experience-box clearfix">
+                    <span class="num">6</span>
+                    <div class="head">років досвіду
+                      <span>у сфері Quality Assurance</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="margin"></div>
+                <div class="content-bottom animated">
+                  <div class="comment-box">
+                    <div class="head">
+                      QA Automation Lead у REMIT
+                    </div>
+                    <div class="text">
+                      Інженер з більш ніж шістьма роками досвіду роботи в сфері Автоматизації. Розробляє сценарії для
+                      покриття багаторівневих аплікацій використовуючи різні платформи і методики тестування. GUI тести,
+                      REST API, Load/Performance, Security тестування.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="double_right">
+        <!--MOBILE-->
+        <div class="custom-tabs custom-tabs__teacher custom-tabs__swipe clearfix show-for-small-only mobile-tabs">
+          <!--mobile tabs content-->
+          <div class="tabs-content-box clearfix">
+            <div id="firstTeacher-sm" class="content-tabs clearfix active">
+              <div class="img-box">
+                <img class="" src="../assets/img/5.png" alt="Олександр Струков - викладач школи QA School">
+              </div>
+              <div class="right-teacher-box">
+                <div class="name">Олександр Струков</div>
+                <div class="content-top">
+                  <div class="experience-box clearfix">
+                    <span class="num">8</span>
+                    <div class="head">років досвіду
+                      <span>у сфері Quality Assurance</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="content-bottom">
+                  <div class="comment-box">
+                    <div class="head">
+                      QA Coordinator в компанії GlobalLogic.
+                    </div>
+                    <div class="text">
+                      Олександр починав свою кар’єру в компанії ELEKS та обіймав такі позиції
+                      як: Business analitic, Project manager, QA Lead. Олександр займається
+                      Performance, Load, Stress а також Автоматизованим тестуванням.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="secondTeacher-sm" class="content-tabs clearfix">
+              <div class="img-box">
+                <img class="" src="../assets/img/4.png" alt="Андрій Волошенко - викладач школи QA School">
+              </div>
+              <div class="right-teacher-box">
+                <div class="name">Андрій Волошенко</div>
+                <div class="content-top">
+                  <div class="experience-box clearfix">
+                    <span class="num">7</span>
+                    <div class="head">років досвіду
+                      <span>у сфері Quality Assurance</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="content-bottom">
+                  <div class="comment-box">
+                    <div class="head">
+                      Спеціаліст з багаторічним досвідом, працював в таких компаніях як
+                      SoftServe, Luxoft, Ciklum.
+                    </div>
+                    <div class="text">
+                      Успішно реалізував більше 60 комерційних
+                      проектів в різних напрямках.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="thirdTeacher-sm" class="content-tabs clearfix">
+              <div class="img-box">
+                <img class="" src="../assets/img/1.png" alt="Наталя Коваль - викладач школи QA School">
+              </div>
+              <div class="right-teacher-box">
+                <div class="name">Наталя Коваль</div>
+                <div class="content-top">
+                  <div class="experience-box clearfix">
+                    <span class="num">5</span>
+                    <div class="head">років досвіду
+                      <span>у сфері Quality Assurance</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="content-bottom">
+                  <div class="comment-box">
+                    <div class="head">
+                      QC Engineer в компанії Intellias.
+                    </div>
+                    <div class="text">
+                      Займається як ручним, так і автоматизованим тестуванням та
+                      спеціалізується на тестуванні RESTful веб-сервісів. Наталя також є
+                      активним учасником різних заходів, присвячених QA, зокрема була
+                      спікером WTM16 та QAStandup June2016.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="fourthTeacher-sm" class="content-tabs clearfix">
+              <div class="img-box">
+                <img class="" src="../assets/img/2.png" alt="Тарас Фігурняк - викладач школи QA School">
+              </div>
+              <div class="right-teacher-box">
+                <div class="name">Тарас Фігурняк</div>
+                <div class="content-top">
+                  <div class="experience-box clearfix">
+                    <span class="num">5</span>
+                    <div class="head">років досвіду
+                      <span>у сфері Quality Assurance</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="content-bottom">
+                  <div class="comment-box">
+                    <div class="head">
+                      Більше 5-ти років в ІТ.
+                    </div>
+                    <div class="text">
+                      Тарас починав свою кар’єру в компанії SoftServe
+                      в якості Manual Test Engineer. Зараз працює в компанії Edvantis та
+                      виконує роль Automation QA.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="fifthTeacher-sm" class="content-tabs clearfix">
+              <div class="img-box">
+                <img class="" src="../assets/img/3.png" alt="Юрій Олійник - викладач школи QA School">
+              </div>
+              <div class="right-teacher-box">
+                <div class="name">Юрій Олійник</div>
+                <div class="content-top">
+                  <div class="experience-box clearfix">
+                    <span class="num">6</span>
+                    <div class="head">років досвіду
+                      <span>у сфері Quality Assurance</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="content-bottom">
+                  <div class="comment-box">
+                    <div class="head">
+                      Більше 6 років досвіду в тестуванні мобільних додатків та
+                      WEB-проектів.
+                    </div>
+                    <div class="text">
+                      Юрій – QA Engineer в компанії N-iX. Різносторонній
+                      спеціаліст з навиками атоматизації, тестування продуктивності, REST API
+                      тестування та інше
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="sixthTeacher-sm" class="content-tabs clearfix">
+              <div class="img-box">
+                <img class="" src="../assets/img/0.png" alt="Роман Шайда - викладач школи QA School">
+              </div>
+              <div class="right-teacher-box">
+                <div class="name">Роман Шайда</div>
+                <div class="content-top">
+                  <div class="experience-box clearfix">
+                    <span class="num">6</span>
+                    <div class="head">років досвіду
+                      <span>у сфері Quality Assurance</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="content-bottom">
+                  <div class="comment-box">
+                    <div class="head">
+                      QA Automation Lead у REMIT
+                    </div>
+                    <div class="text">
+                      Інженер з більш шістьма роками досвіду роботи роботи в сфері Автоматизації. Розробляє сценарії для
+                      покриття багаторівневих аплікацій використовуючи різні платформи і методики тестування. GUI тести,
+                      REST API, Load/Performance, Security тестування.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--mobile pager-->
+          <ul data-tabs="mouseover" class="pager-mobile list-inline link-tabs">
+            <li class="active"><a data-href="#firstTeacher-sm"><span class="line"></span></a></li>
+            <li><a data-href="#secondTeacher-sm"><span class="line"></span></a></li>
+            <li><a data-href="#thirdTeacher-sm"><span class="line"></span></a></li>
+            <li><a data-href="#fourthTeacher-sm"><span class="line"></span></a></li>
+            <li><a data-href="#fifthTeacher-sm"><span class="line"></span></a></li>
+            <li><a data-href="#sixthTeacher-sm"><span class="line"></span></a></li>
+          </ul>
+        </div>
+        <!--<ul class="navigation list-inline">-->
+        <!--<li><a data-menuanchor="about" class="about_us" href="index.html#about">О нас</a></li>
+<li><a data-menuanchor="goal" class="goal" href="index.html#goal">Цель</a></li>
+<li><a data-menuanchor="qaengineer" class="engineer" href="index.html#">QA Engineer</a></li>
+<li><a data-menuanchor="advantages" class="advantages" href="index.html#advantages">Преимущества</a></li>
+<li><a data-menuanchor="courses" class="curse" href="index.html#courses">Курсы</a></li>
+<li><a data-menuanchor="teachers" class="teacher" href="index.html#teachers">Преподаватели</a></li>
+<li><a data-menuanchor="contacts" class="contacts" href="index.html#contacts">Контакты</a></li>
+-->
+        <!--</ul>-->
+      </div>
+    </section>
+  </div>
+  <div class="section feedbacks">
+    <section id="feedbacks" class="container container_screen container_third clearfix">
+      <header class="container_header container_header__absolute clearfix">
+                    <span class="header_logo header_logo__dark">
+                        <a href="index.html#about">QAschool</a>
+                    </span>
+        <a href="javascript:void(0)" class="link-register" onclick="ga('send', 'pageview', '/click-reg-plus');"> <span
+                class="primary">+</span> Регистрация</a>
+      </header>
+      <div class="half-box half-box__left">
+        <div class="left-pagination">
+          <div class="left-pagination_center">
+            <a href="index.html#" class="current-page current-page__round">
+              07
+              <div class="circle-svg">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="60px" height="60px"
+                     viewBox="0 0 16 16" preserveAspectRatio="none">
+                  <circle cx="8" cy="8" r="6.215" transform="rotate(90 8 8)"></circle>
+                </svg>
+              </div>
+            </a>
+            <div class="page-name">Отзывы</div>
+          </div>
+
+          <div class="left-pagination_bottom">
+            <div class="divider-vertical"></div>
+            <a href="index.html#" class="next-page-num">08</a>
+          </div>
+        </div>
+      </div>
+      <div class="vertical-center-top content-container">
+        <div class="head">Отзывы</div>
+        <div class="">
+          <div class="content">
+            <div>
+              <div class="regular slider single-item">
+                <div class="qqqqq">
+                  <div class="text-feedback title contrast text-center">
+                    <div class="text-feedback-quote"></div>
+                    <div class="position-z-index">
+                      Хочу поділитися приємними враженнями від навчання в QA School. Все чітко, ясно і доступно. Дуже
+                      хороша практика і уважний супровід викладачів. Для тих, хто має бажання вчитися, щоб потім знайти
+                      хорошу роботу в IT, QA School — саме те!
+                    </div>
+                  </div>
+                  <div class="feedback-photo-container">
+                    <a href="https://www.facebook.com/vitaliy.melnyk.5?hc_ref=ARQxVviryfVC05H0Y73Bhhe-x3e6zh8V2jTTqcwhKHdZfmIFFoM_-UdRURz9avFZ17E"
+                       target="_blank">
+                      <img class="feedback-photo vertical-center"
+                           src="../assets/img/vit.jpg"
+                           alt="Віталій Мельник QA School">
+                    </a>
+                  </div>
+                  <div class="user-name">
+                    <a href="https://www.facebook.com/vitaliy.melnyk.5?hc_ref=ARQxVviryfVC05H0Y73Bhhe-x3e6zh8V2jTTqcwhKHdZfmIFFoM_-UdRURz9avFZ17E"
+                       target="_blank">
+                      Віталій Мельник
+                    </a>
+                  </div>
+                  <div class="user-position">
+                    <div class="work-title">
+                      QA Engineer в компанії Diligences
+                    </div>
+                    Колишній випускник курсу «Основы Тестирование ПО»
+                  </div>
+                </div>
+                <div class="qqqqq">
+                  <div class="text-feedback title contrast text-center">
+                    <div class="text-feedback-quote"></div>
+                    <div class="position-z-index">
+                      Якісно викладена теорія та дуже багато практики - найкраща суміш для створення QA інженера. Саме
+                      так тут і відбувається навчання. Все під пильним наглядом досвідченого викладача, який ніколи не
+                      проігнорує ваше питання.
+                      QA School однозначно Бро.
+                    </div>
+                  </div>
+                  <div class="feedback-photo-container">
+                    <a href="https://www.facebook.com/hoinych" target="_blank">
+                      <img class="feedback-photo vertical-center"
+                           src="../assets/img/iva.jpg"
+                           alt="Іван Гойнич QA School">
+                    </a>
+                  </div>
+                  <div class="user-name">
+                    <a href="https://www.facebook.com/hoinych" target="_blank">
+                      Іван Гойнич
+                    </a>
+                  </div>
+                  <div class="user-position">
+                    <div class="work-title">
+                      QA Engineer в компанії Informz
+                    </div>
+                    Колишній випускник курсу «Основы Тестирование ПО»
+                  </div>
+                </div>
+                <div class="qqqqq">
+                  <div class="text-feedback title contrast text-center">
+                    <div class="text-feedback-quote"></div>
+                    <div class="position-z-index">
+                      Теорія подається чітко, гарно, з багатьма прикладами,подається різними мовами: українською,
+                      англійською, мовою IT та "по-хлопські". Надається багато додаткового корисного матеріалу для
+                      кращого усвоєння інформації. Практики багато: і в написанні ТС, і в самому тестуванні, за що
+                      окрема подяка. Група невелика, до кожного ставляться уважно, перепитуються в зрозумінні матеріалу,
+                      підтримують. Все чудово! Всім раджу! Сподіваюсь, що і надалі Expected Result буде дорівнювати to
+                      Actual Result!
+                    </div>
+                  </div>
+                  <div class="feedback-photo-container">
+                    <a href="https://www.facebook.com/profile.php?id=100011358334622&hc_ref=ARTaiaaMxjuQtnxt_OBVLfxyrUVgdnRGf8bjxOyfIyJjqRA9tHZckLYcRPh3pmrLi0E"
+                       target="_blank">
+                      <img class="feedback-photo vertical-center"
+                           src="../assets/img/inn.jpg"
+                           alt="Інна Анохіна QA School">
+                    </a>
+                  </div>
+                  <div class="user-name">
+                    <a href="https://www.facebook.com/profile.php?id=100011358334622&hc_ref=ARTaiaaMxjuQtnxt_OBVLfxyrUVgdnRGf8bjxOyfIyJjqRA9tHZckLYcRPh3pmrLi0E"
+                       target="_blank">
+                      Інна Анохіна
+                    </a>
+                  </div>
+                  <div class="user-position">
+                    Випускниця курсу «Основы Тестирование ПО»
+                  </div>
+                </div>
+                <div class="qqqqq">
+                  <div class="text-feedback title contrast text-center">
+                    <div class="text-feedback-quote"></div>
+                    <div class="position-z-index">
+                      Для мене QA School запам'яталася позитивною і дружньою атмосферою та індивідуальним підходом до
+                      кожного студента. Робота в команді, можливість попробувати свої навички на реальному проекті за
+                      методологією Scrum - все це дало змогу мені здобути гарний досвід в сфері ІТ. Викладання ведеться
+                      на доступному рівні, багато уваги приділяється деталям. Це дає можливість студентам робити свої
+                      перші кроки в ІТ навіть без попередньої профільної освіти.
+                    </div>
+                  </div>
+                  <div class="feedback-photo-container">
+                    <a href="https://www.facebook.com/larysa.kozak.1?hc_ref=ARQf-0uIR2RoyopebXFGt5OclKeOJpReZCyRdQC2dEIbfDXUB_9WL5B_oT5SpUVYOBY"
+                       target="_blank">
+                      <img class="feedback-photo vertical-center"
+                           src="../assets/img/lar.jpg"
+                           alt="Лариса Обушак QA School">
+                    </a>
+                  </div>
+                  <div class="user-name">
+                    <a href="https://www.facebook.com/larysa.kozak.1?hc_ref=ARQf-0uIR2RoyopebXFGt5OclKeOJpReZCyRdQC2dEIbfDXUB_9WL5B_oT5SpUVYOBY"
+                       target="_blank">
+                      Лариса Обушак
+                    </a>
+                  </div>
+                  <div class="user-position">
+                    <div class="work-title">
+                      QC Engineer в компанії SoftServe
+                    </div>
+                    Колишня випускниця курсу «Основы Тестирование ПО»
+                  </div>
+                </div>
+                <div class="qqqqq">
+                  <div class="text-feedback title contrast text-center">
+                    <div class="text-feedback-quote"></div>
+                    <div class="position-z-index">
+                      Цікаво, інформативно, доступно і дружньо. Курс надає можливість закріпити здобуті теоретичні
+                      знання на практиці. Якщо Ви хочете спробувати себе в сфері QA, то QA School - це хороший початок!
+                      Рекомендую.
+                    </div>
+                  </div>
+                  <div class="feedback-photo-container">
+                    <a href="https://www.facebook.com/lilia.boyko?hc_ref=ARRK5U8MMwCQvStu7Kjrn4llp2_oVtqpUsO0NvQDMZ1lPJwcHnfgCM_RMI3P3tijUQI"
+                       target="_blank">
+                      <img class="feedback-photo vertical-center"
+                           src="../assets/img/lil.jpg"
+                           alt="Лілія Бойко QA School">
+                    </a>
+                  </div>
+                  <div class="user-name">
+                    <a href="https://www.facebook.com/lilia.boyko?hc_ref=ARRK5U8MMwCQvStu7Kjrn4llp2_oVtqpUsO0NvQDMZ1lPJwcHnfgCM_RMI3P3tijUQI"
+                       target="_blank">
+                      Лілія Бойко
+                    </a>
+                  </div>
+                  <div class="user-position">
+                    <div class="work-title">
+                      QA Engineer в компанії Gameloft
+                    </div>
+                    Колишня випускниця курсу «Основы Тестирование ПО»
+                  </div>
+                </div>
+                <div class="qqqqq">
+                  <div class="text-feedback title contrast text-center">
+                    <div class="text-feedback-quote"></div>
+                    <div class="position-z-index">
+                      Одна из лучших школ по обучению тестирования во Львове. Специализация (курсы только QA),
+                      практикующие преподаватели - специалисты высокого уровня, сбалансированная актуальная теория,
+                      обширная практика на реальном проекте, использование нужных инструментов, интересные задачи,
+                      маленькие группы, индивидуальный подход к каждому студенту. Все это дает качественный результат
+                      чтобы стать настоящим QA Engineer! Выбирай QAShool!!!
+                    </div>
+                  </div>
+                  <div class="feedback-photo-container">
+                    <a href="https://www.facebook.com/ovsuk.maksim?hc_ref=ARQC9GK_PxlczyfE2lrwjxB3UOqOd8XGHlRYtPRiqktJ5Y6yTxchMQBCFZho6qjOzOQ"
+                       target="_blank">
+                      <img class="feedback-photo vertical-center"
+                           src="../assets/img/max.jpg"
+                           alt="Максим Овсюк QA School">
+                    </a>
+                  </div>
+                  <div class="user-name">
+                    <a href="https://www.facebook.com/ovsuk.maksim?hc_ref=ARQC9GK_PxlczyfE2lrwjxB3UOqOd8XGHlRYtPRiqktJ5Y6yTxchMQBCFZho6qjOzOQ"
+                       target="_blank">
+                      Максим Овсюк
+                    </a>
+                  </div>
+                  <div class="user-position">
+                    Випускник курсу «Основы Тестирование ПО»
+                  </div>
+                </div>
+                <div class="qqqqq">
+                  <div class="text-feedback title contrast text-center">
+                    <div class="text-feedback-quote"></div>
+                    <div class="position-z-index">
+                      Мені сподобалось навчання в QA School. Цікавими були як теорія, так і практика.Чітко і доступно
+                      подається матеріал, завжди надаються приклади. Тут турбуються про те, щоб ми не просто прослухали
+                      інформацію, а засвоїли все якнайкраще, і стали відмінними спеціалістами.
+                    </div>
+                  </div>
+                  <div class="feedback-photo-container">
+                    <a href="https://www.facebook.com/natalia.vozna.16?hc_ref=ARQ5-K_9yc59ADkgzPKsoInqxkg0A5h0a-mnSDiwYtwrzfkmML9qyiMB-1e0F--0wPo"
+                       target="_blank">
+                      <img class="feedback-photo vertical-center"
+                           src="../assets/img/nat.jpg"
+                           alt="Наталія Возна QA School">
+                    </a>
+                  </div>
+                  <div class="user-name">
+                    <a href="https://www.facebook.com/natalia.vozna.16?hc_ref=ARQ5-K_9yc59ADkgzPKsoInqxkg0A5h0a-mnSDiwYtwrzfkmML9qyiMB-1e0F--0wPo"
+                       target="_blank">
+                      Наталія Возна
+                    </a>
+                  </div>
+                  <div class="user-position">
+                    <div class="work-title">
+                      QA Engineer в компанії Bytebrand AG
+                    </div>
+                    Колишня випускниця курсу «Основы Тестирование ПО»
+                  </div>
+                </div>
+                <div class="qqqqq">
+                  <div class="text-feedback title contrast text-center">
+                    <div class="text-feedback-quote"></div>
+                    <div class="position-z-index">
+                      Однозначно буду рекомендувати своїм друзям цю школу. Круті викладачі. Все дуже якісно пояснюють,
+                      відповідають на всі запитання детально і з прикладами. Кращої практичної частини я не знайшов у
+                      Львові. Протягом курсу отримав і засвоїв дуже велику кількість інформації і набув важливих вмінь в
+                      тестуванні ПЗ.
+                    </div>
+                  </div>
+                  <div class="feedback-photo-container">
+                    <a href="https://www.facebook.com/paul.rusyn.5?hc_ref=ARSFzpHCjMKvfzrbe0qS-W4-OV5RpRnuWpRpY00hXrxbE9ae8FW95Nd1EMDOpBcMkLU"
+                       target="_blank">
+                      <img class="feedback-photo vertical-center"
+                           src="../assets/img/pav.jpg"
+                           alt="Павло Русин QA School">
+                    </a>
+                  </div>
+                  <div class="user-name">
+                    <a href="https://www.facebook.com/paul.rusyn.5?hc_ref=ARSFzpHCjMKvfzrbe0qS-W4-OV5RpRnuWpRpY00hXrxbE9ae8FW95Nd1EMDOpBcMkLU"
+                       target="_blank">
+                      Павло Русин
+                    </a>
+                  </div>
+                  <div class="user-position">
+                    <div class="work-title">
+                      QA Engineer в компанії ImageCMS
+                    </div>
+                    Колишній випускник курсу «Основы Тестирование ПО»
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--mobile block show-->
+        <!--<div class="show-for-small-only mobile-text">-->
+        <!--<div class="title contrast">-->
+        <!--Quality Assurance інженер (тест-інженер, тестувальник) - фахівець, який займається-->
+        <!--покращенням процесу розробки ПЗ, запобіганням появи недоліків та виявленням помилок в-->
+        <!--кінцевому продукті.-->
+        <!--</div>-->
+        <!--<div class="text">-->
+        <!--QA інженер – це та спеціальність, яка користується значним попитом в ІТ-індустрії. Цей-->
+        <!--факт зумовлений об’єктивними причинами. Через тотальну комп’ютеризацію усіх галузей життя-->
+        <!--сфера ІТ активно розвивається. Відповідно зростає і кількість продуктів, які з’являються-->
+        <!--на ринку. Аби ці продукти були досконалими і якісними, потрібна велика кількість-->
+        <!--відповідних спеціалістів.-->
+        <!--</div>-->
+        <!--<div class="text">-->
+        <!--Цими ж причинами зумовлений і високий рівень оплати праці тестерів. В Україні в середньому-->
+        <!--QA інженер отримує заробітню плату в розмірі від 600$ (Junior) до 2700$ (Senior). Наша-->
+        <!--школа з підготовки QA (тестерів) допоможе вийти на високий рівень професійності.-->
+        <!--</div>-->
+        <!--<div class="text">-->
+        <!--Професія QA інженер (тестер) - найбільш перспективна (після програміста) в сфері-->
+        <!--інформаційних технологій. Окрім того, це найлегший і найшвидший спосіб потрапити в ІТ,-->
+        <!--оскільки потребує менше спеціальних знань і часу для засвоєння (якщо порівнювати з-->
+        <!--програмуванням), а сама теоретична база є дещо простішою для розуміння і засвоєння.-->
+        <!--</div>-->
+        <!--<div class="title contrast">-->
+        <!--Будь хто має змогу <br>-->
+        <!--приєднатися до сфери IT-->
+        <!--</div>-->
+        <!--<div class="text">-->
+        <!--Незалежно від статі, віку та освіти, якщо Ви хочете працювати в ІТ, але не-->
+        <!--бачите себе програмістом, QA інженер - професія саме для Вас!-->
+        <!--</div>-->
+        <!--<ul class="list list__icon text-left">-->
+        <!--<li class="salary">-->
+        <!--<span class="bold-md">$600 - $2700+</span><br>-->
+        <!--заробітня плата-->
+        <!--</li>-->
+        <!--<li class="vacancy">-->
+        <!--<span class="bold-md">3000+ вакансій</span><br>-->
+        <!--по всій території України-->
+        <!--</li>-->
+        <!--</ul>-->
+        <!--</div>-->
+        <!--END: mobile block show-->
+      </div>
+    </section>
+  </div>
+  <div class="section last">
+    <section id="contacts" class="container container_screen container_footer">
+      <header class="container_header container_header__absolute clearfix">
+                    <span class="header_logo header_logo__white">
+                        <a href="index.html#about">QAschool</a>
+                    </span>
+        <a href="javascript:void(0)" class="link-register link-register__dark"
+           onclick="ga('send', 'pageview', '/click-reg-plus');"> <span class="secondary">+</span> Регистрация</a>
+      </header>
+      <div class="left-pagination">
+        <div class="left-pagination_center">
+          <a href="index.html#" class="current-page current-page__round dark-gray">
+            08
+            <div class="circle-svg">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="60px" height="60px"
+                   viewBox="0 0 16 16" preserveAspectRatio="none">
+                <circle cx="8" cy="8" r="6.215" transform="rotate(90 8 8)"></circle>
+              </svg>
+            </div>
+          </a>
+          <div class="page-name dark-gray">Контакты</div>
+        </div>
+      </div>
+      <div class="vertical-center-top contacts-box">
+        <div class="contact-box">
+          <div class="brand animated">
+            <span class="after animated"></span>
+          </div>
+          <div class="info animated">
+            <p class="string">г. Львов, <br> ул. Лемковская 9А</p>
+            <p class="string">+38(067)937-55-23</p>
+            <p class="string lowercase">info@qaschool.com.ua</p>
+          </div>
+        </div>
+        <div class="register-box">
+          <div class="divider"></div>
+          <div class="title">Регистрация</div>
+          <form action="#" id="register_form">
+            <div class="row">
+              <div class="columns medium-6">
+                <select id="curse_select" name="course" class="form-control">
+                  <option disabled selected>Выберите курс</option>
+                  <option value="Основи Тестування ПЗ">Основы Тестирование ПО</option>
+                  <option value="Поглиблена Практика">Углубленная Практика</option>
+                  <option value="Автоматизоване Тестування">Автоматизированное Тестирование</option>
+                  <option value="Безкоштовна презентація курсу">Бесплатная презентация курса</option>
+                </select>
+              </div>
+              <div class="columns medium-6">
+                <input type="text" name="firstlastname" class="form-control" placeholder="Фамилия и имя">
+              </div>
+            </div>
+            <div class="row">
+              <div class="columns medium-6">
+                <input type="text" name="phonenumber" class="form-control" placeholder="Моб. телефон">
+              </div>
+              <div class="columns medium-6">
+                <input type="text" name="email" class="form-control" placeholder="Электронная почта">
+              </div>
+            </div>
+            <div class="row">
+              <div class="columns medium-12">
+                <input type="text" name="comment" class="form-control" placeholder="Комментарии">
+                <button type="submit" class="button button_icon">Отправить заявку <span
+                        class="icon"></span></button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!--<ul class="navigation navigation__dark list-inline">-->
+      <!--<li><a data-menuanchor="about" class="about_us" href="index.html#about">О нас</a></li>
+  <li><a data-menuanchor="goal" class="goal" href="index.html#goal">Цель</a></li>
+  <li><a data-menuanchor="qaengineer" class="engineer" href="index.html#">QA Engineer</a></li>
+  <li><a data-menuanchor="advantages" class="advantages" href="index.html#advantages">Преимущества</a></li>
+  <li><a data-menuanchor="courses" class="curse" href="index.html#courses">Курсы</a></li>
+  <li><a data-menuanchor="teachers" class="teacher" href="index.html#teachers">Преподаватели</a></li>
+  <li><a data-menuanchor="contacts" class="contacts" href="index.html#contacts">Контакты</a></li>
+  -->
+      <!--</ul>-->
+      <div class="copyright">© QASCHOOL, 2015 - 2019 ЭТА СТРАНИЦА НА <a href="../index.html">украинском языке</a></div>
+    </section>
+  </div>
+</div>
+<script src="../assets/js/jquery.min.js"></script>
+<script src="http://cdn.jsdelivr.net/vivus/latest/vivus.min.js"></script>
+
+<script src="../assets/js/fetch.js"></script>
+<!--<script src="assets/js/snap.svg.js"></script>-->
+<!--google maps-->
+<!--<script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=true"></script>-->
+<!--<script type="text/javascript" src="assets/js/gmaps.js"></script>-->
+<script type="text/javascript" src="../assets/js/jquery.validate.min.js"></script>
+<!--<script type="text/javascript" src="assets/js/additional-methods.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+<script src="../assets/js/jquery.matchHeight-min.js"></script>
+<script src="../assets/js/jquery.fullpage.min.js"></script>
+<script src="../assets/js/jquery.ikSelect.min.js"></script>
+<script src="../assets/js/typed.min.js"></script>
+<script src="../assets/js/app-v=0.4.js"></script>
+
+<!-- Код тега ремаркетинга Google -->
+<script type="text/javascript">
+  /* <![CDATA[ */
+  var google_conversion_id = 877812832;
+  var google_custom_params = window.google_tag_params;
+  var google_remarketing_only = true;
+  /* ]]> */
+</script>
+<script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+  <div style="display:inline;">
+    <img height="1" width="1" style="border-style:none;" alt=""
+         src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/877812832/?value=0&guid=ON&script=0"/>
+  </div>
+</noscript>
+</body>
+</html>
